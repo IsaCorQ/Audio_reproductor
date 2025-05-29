@@ -1,8 +1,82 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)unsaved.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in,(SLAVE)unsaved.clk) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst audioplay.hps_0.bridges -pg 1
+preplace inst audioplay.hps_0.timer -pg 1
+preplace inst audioplay -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst audioplay.hps_0.f2s_periph_ref_clk -pg 1
+preplace inst audioplay.filtro1 -pg 1 -lvl 3 -y 390
+preplace inst audioplay.hps_0.axi_ocram -pg 1
+preplace inst audioplay.filtro2 -pg 1 -lvl 3 -y 490
+preplace inst audioplay.hps_0.hps_io.border -pg 1
+preplace inst audioplay.hps_0.rstmgr -pg 1
+preplace inst audioplay.hps_0.scu -pg 1
+preplace inst audioplay.hps_0.uart0 -pg 1
+preplace inst audioplay.audio_0 -pg 1 -lvl 2 -y 1060
+preplace inst audioplay.hps_0.uart1 -pg 1
+preplace inst audioplay.hps_0.i2c0 -pg 1
+preplace inst audioplay.proce -pg 1 -lvl 2 -y 550
+preplace inst audioplay.hps_0.i2c1 -pg 1
+preplace inst audioplay.hps_0.i2c2 -pg 1
+preplace inst audioplay.hps_0.eosc1 -pg 1
+preplace inst audioplay.hps_0.i2c3 -pg 1
+preplace inst audioplay.hps_0.L2 -pg 1
+preplace inst audioplay.hps_0.qspi -pg 1
+preplace inst audioplay.hps_0.eosc2 -pg 1
+preplace inst audioplay.hps_0.clk_0 -pg 1
+preplace inst audioplay.hps_0.l3regs -pg 1
+preplace inst audioplay.proce.cpu -pg 1
+preplace inst audioplay.hps_0.fpga_interfaces -pg 1
+preplace inst audioplay.RAM -pg 1 -lvl 3 -y 310
+preplace inst audioplay.hps_0.clkmgr -pg 1
+preplace inst audioplay.audio_pll_0.reset_from_locked -pg 1
+preplace inst audioplay.jtag_uart_0 -pg 1 -lvl 3 -y 590
+preplace inst audioplay.hps_0.nand0 -pg 1
+preplace inst audioplay.hps_0.axi_sdram -pg 1
+preplace inst audioplay.hps_0.fpgamgr -pg 1
+preplace inst audioplay.hps_0.spim0 -pg 1
+preplace inst audioplay.seg1 -pg 1 -lvl 3 -y 990
+preplace inst audioplay.hps_0.spim1 -pg 1
+preplace inst audioplay.seg2 -pg 1 -lvl 3 -y 1090
+preplace inst audioplay.audio_and_video_config_0 -pg 1 -lvl 2 -y 910
+preplace inst audioplay.hps_0.wd_timer0 -pg 1
+preplace inst audioplay.clk_0 -pg 1 -lvl 1 -y 570
+preplace inst audioplay.hps_0.hps_io -pg 1
+preplace inst audioplay.hps_0.wd_timer1 -pg 1
+preplace inst audioplay.hps_0.sdrctl -pg 1
+preplace inst audioplay.hps_0.arm_gic_0 -pg 1
+preplace inst audioplay.hps_0.dma -pg 1
+preplace inst audioplay.hps_0.f2s_sdram_ref_clk -pg 1
+preplace inst audioplay.hps_0.usb0 -pg 1
+preplace inst audioplay.min1 -pg 1 -lvl 3 -y 790
+preplace inst audioplay.hps_0.usb1 -pg 1
+preplace inst audioplay.hps_0 -pg 1 -lvl 1 -y 50
+preplace inst audioplay.min2 -pg 1 -lvl 3 -y 890
+preplace inst audioplay.timer_0 -pg 1 -lvl 3 -y 690
+preplace inst audioplay.hps_0.gmac0 -pg 1
+preplace inst audioplay.hps_0.gmac1 -pg 1
+preplace inst audioplay.hps_0.sdmmc -pg 1
+preplace inst audioplay.hps_0.timer0 -pg 1
+preplace inst audioplay.audio_pll_0 -pg 1 -lvl 1 -y 1060
+preplace inst audioplay.hps_0.timer1 -pg 1
+preplace inst audioplay.proce.clock_bridge -pg 1
+preplace inst audioplay.hps_0.sysmgr -pg 1
+preplace inst audioplay.hps_0.timer2 -pg 1
+preplace inst audioplay.audio_pll_0.audio_pll -pg 1
+preplace inst audioplay.hps_0.arm_a9_0 -pg 1
+preplace inst audioplay.hps_0.timer3 -pg 1
+preplace inst audioplay.hps_0.gpio0 -pg 1
+preplace inst audioplay.proce.reset_bridge -pg 1
+preplace inst audioplay.hps_0.arm_a9_1 -pg 1
+preplace inst audioplay.hps_0.gpio1 -pg 1
+preplace inst audioplay.hps_0.dcan0 -pg 1
+preplace inst audioplay.hps_0.gpio2 -pg 1
+preplace inst audioplay.hps_0.dcan1 -pg 1
+preplace netloc EXPORT<net_container>audioplay</net_container>(SLAVE)audioplay.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>audioplay</net_container>(SLAVE)audioplay.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>audioplay</net_container>(SLAVE)audio_0.interrupt,(MASTER)proce.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)timer_0.irq) 1 1 2 470 720 830
+preplace netloc FAN_OUT<net_container>audioplay</net_container>(SLAVE)min1.reset,(SLAVE)seg2.reset,(SLAVE)seg1.reset,(SLAVE)timer_0.reset,(SLAVE)filtro1.reset,(SLAVE)RAM.reset1,(SLAVE)audio_pll_0.ref_reset,(SLAVE)filtro2.reset,(SLAVE)audio_0.reset,(SLAVE)min2.reset,(SLAVE)proce.reset,(SLAVE)jtag_uart_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)audio_and_video_config_0.reset) 1 0 3 100 1020 410 690 870
+preplace netloc FAN_OUT<net_container>audioplay</net_container>(SLAVE)audio_and_video_config_0.clk,(SLAVE)min2.clk,(SLAVE)filtro2.clk,(SLAVE)timer_0.clk,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)seg1.clk,(SLAVE)audio_pll_0.ref_clk,(SLAVE)seg2.clk,(SLAVE)filtro1.clk,(SLAVE)proce.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)audio_0.clk,(SLAVE)RAM.clk1,(MASTER)clk_0.clk,(SLAVE)hps_0.f2h_axi_clock,(SLAVE)jtag_uart_0.clk,(SLAVE)min1.clk) 1 0 3 80 250 450 320 890
+preplace netloc INTERCONNECT<net_container>audioplay</net_container>(SLAVE)min2.s1,(SLAVE)hps_0.f2h_axi_slave,(SLAVE)seg2.s1,(SLAVE)hps_0.f2h_sdram0_data,(SLAVE)timer_0.s1,(SLAVE)RAM.s1,(SLAVE)audio_and_video_config_0.avalon_av_config_slave,(MASTER)proce.data_master,(SLAVE)filtro1.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)seg1.s1,(MASTER)proce.instruction_master,(SLAVE)audio_0.avalon_audio_slave,(SLAVE)filtro2.s1,(SLAVE)proce.debug_mem_slave,(SLAVE)min1.s1) 1 0 3 100 270 430 360 850
+preplace netloc EXPORT<net_container>audioplay</net_container>(SLAVE)hps_0.memory,(SLAVE)audioplay.memory) 1 0 1 NJ
+levelinfo -pg 1 0 50 1080
+levelinfo -hier audioplay 60 220 590 920 1070

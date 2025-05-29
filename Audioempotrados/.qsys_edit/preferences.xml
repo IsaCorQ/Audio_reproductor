@@ -3,11 +3,11 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="223" />
+   <connections preferredWidth="111" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/Interface Protocols,Project,Library/Processors and Peripherals/Peripherals,Library/Processors and Peripherals,Library,Library/Interface Protocols/PCI Express,Library/Interface Protocols/PCI Express/QSYS Example Designs" />
+   expandedCategories="Library/Processors and Peripherals/Hard Processor Systems,Project,Library/Processors and Peripherals/Hard Processor Components,Library,Library/Processors and Peripherals" />
  <window width="1366" height="768" x="0" y="0" />
 </preferences>

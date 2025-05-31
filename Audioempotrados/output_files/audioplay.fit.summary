@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat May 31 16:32:54 2025
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : audioplay
+Top-level Entity Name : audioplay
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 2,017 / 32,070 ( 6 % )
+Total registers : 3049
+Total pins : 77 / 457 ( 17 % )
+Total virtual pins : 0
+Total block memory bits : 136,704 / 4,065,280 ( 3 % )
+Total RAM Blocks : 27 / 397 ( 7 % )
+Total DSP Blocks : 3 / 87 ( 3 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 1 / 4 ( 25 % )

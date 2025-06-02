@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay.qsys --block-symbol-file --output-directory=/home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay.qsys --block-symbol-file --output-directory=/home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Audioempotrados/audioplay.qsys
 Progress: Reading input file
 Progress: Adding RAM [altera_avalon_onchip_memory2 18.0]
@@ -53,7 +53,7 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay.qsys --synthesis=VERILOG --output-directory=/home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Info: qsys-generate /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay.qsys --synthesis=VERILOG --output-directory=/home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
 Progress: Loading Audioempotrados/audioplay.qsys
 Progress: Reading input file
 Progress: Adding RAM [altera_avalon_onchip_memory2 18.0]
@@ -106,7 +106,7 @@ Warning: audioplay.hps_0: hps_0.h2f_mpu_events must be exported, or connected to
 Info: audioplay: Generating audioplay "audioplay" for QUARTUS_SYNTH
 Info: Interconnect is inserted between master hps_0.h2f_lw_axi_master and slave RAM.s2 because the master is of type axi and the slave is of type avalon.
 Info: RAM: Starting RTL generation for module 'audioplay_RAM'
-Info: RAM:   Generation command is [exec /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audioplay_RAM --dir=/tmp/alt0237_3893697859703161793.dir/0002_RAM_gen/ --quartus_dir=/home/isa/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0237_3893697859703161793.dir/0002_RAM_gen//audioplay_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM:   Generation command is [exec /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=audioplay_RAM --dir=/tmp/alt0241_1524907047247576657.dir/0002_RAM_gen/ --quartus_dir=/home/dylanggf/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0241_1524907047247576657.dir/0002_RAM_gen//audioplay_RAM_component_configuration.pl  --do_build_sim=0  ]
 Info: RAM: Done RTL generation for module 'audioplay_RAM'
 Info: RAM: "audioplay" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: audio_0: Starting Generation of Audio Controller
@@ -115,7 +115,7 @@ Info: audio_and_video_config_0: Starting Generation of Audio and Video Config
 Info: audio_and_video_config_0: "audioplay" instantiated altera_up_avalon_audio_and_video_config "audio_and_video_config_0"
 Info: audio_pll_0: "audioplay" instantiated altera_up_avalon_audio_pll "audio_pll_0"
 Info: filtro1: Starting RTL generation for module 'audioplay_filtro1'
-Info: filtro1:   Generation command is [exec /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audioplay_filtro1 --dir=/tmp/alt0237_3893697859703161793.dir/0005_filtro1_gen/ --quartus_dir=/home/isa/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0237_3893697859703161793.dir/0005_filtro1_gen//audioplay_filtro1_component_configuration.pl  --do_build_sim=0  ]
+Info: filtro1:   Generation command is [exec /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audioplay_filtro1 --dir=/tmp/alt0241_1524907047247576657.dir/0005_filtro1_gen/ --quartus_dir=/home/dylanggf/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0241_1524907047247576657.dir/0005_filtro1_gen//audioplay_filtro1_component_configuration.pl  --do_build_sim=0  ]
 Info: filtro1: Done RTL generation for module 'audioplay_filtro1'
 Info: filtro1: "audioplay" instantiated altera_avalon_pio "filtro1"
 Info: hps_0: "Running  for module: hps_0"
@@ -127,16 +127,16 @@ Warning: hps_0: ODT is disabled. Enabling ODT (Mode Register 1) may improve sign
 Warning: hps_0: set_interface_assignment: Interface "hps_io" does not exist
 Info: hps_0: "audioplay" instantiated altera_hps "hps_0"
 Info: jtag_uart_0: Starting RTL generation for module 'audioplay_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audioplay_jtag_uart_0 --dir=/tmp/alt0237_3893697859703161793.dir/0006_jtag_uart_0_gen/ --quartus_dir=/home/isa/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0237_3893697859703161793.dir/0006_jtag_uart_0_gen//audioplay_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=audioplay_jtag_uart_0 --dir=/tmp/alt0241_1524907047247576657.dir/0006_jtag_uart_0_gen/ --quartus_dir=/home/dylanggf/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0241_1524907047247576657.dir/0006_jtag_uart_0_gen//audioplay_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'audioplay_jtag_uart_0'
 Info: jtag_uart_0: "audioplay" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: min1: Starting RTL generation for module 'audioplay_min1'
-Info: min1:   Generation command is [exec /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/isa/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audioplay_min1 --dir=/tmp/alt0237_3893697859703161793.dir/0007_min1_gen/ --quartus_dir=/home/isa/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0237_3893697859703161793.dir/0007_min1_gen//audioplay_min1_component_configuration.pl  --do_build_sim=0  ]
+Info: min1:   Generation command is [exec /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/bin/perl -I /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/perl/lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=audioplay_min1 --dir=/tmp/alt0241_1524907047247576657.dir/0007_min1_gen/ --quartus_dir=/home/dylanggf/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0241_1524907047247576657.dir/0007_min1_gen//audioplay_min1_component_configuration.pl  --do_build_sim=0  ]
 Info: min1: Done RTL generation for module 'audioplay_min1'
 Info: min1: "audioplay" instantiated altera_avalon_pio "min1"
 Info: proce: "audioplay" instantiated altera_nios2_gen2 "proce"
 Info: timer_0: Starting RTL generation for module 'audioplay_timer_0'
-Info: timer_0:   Generation command is [exec /home/isa/intelFPGA_lite/18.0/quartus/linux64//perl/bin/perl -I /home/isa/intelFPGA_lite/18.0/quartus/linux64//perl/lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audioplay_timer_0 --dir=/tmp/alt0237_3893697859703161793.dir/0008_timer_0_gen/ --quartus_dir=/home/isa/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0237_3893697859703161793.dir/0008_timer_0_gen//audioplay_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0:   Generation command is [exec /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64//perl/bin/perl -I /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64//perl/lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=audioplay_timer_0 --dir=/tmp/alt0241_1524907047247576657.dir/0008_timer_0_gen/ --quartus_dir=/home/dylanggf/intelFPGA_lite/18.0/quartus --verilog --config=/tmp/alt0241_1524907047247576657.dir/0008_timer_0_gen//audioplay_timer_0_component_configuration.pl  --do_build_sim=0  ]
 Info: timer_0: Done RTL generation for module 'audioplay_timer_0'
 Info: timer_0: "audioplay" instantiated altera_avalon_timer "timer_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -162,31 +162,25 @@ Info: reset_from_locked: "audio_pll_0" instantiated altera_up_avalon_reset_from_
 Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
 Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
 Info: cpu: Starting RTL generation for module 'audioplay_proce_cpu'
-Info: cpu:   Generation command is [exec /home/isa/intelFPGA_lite/18.0/quartus/linux64//eperlcmd -I /home/isa/intelFPGA_lite/18.0/quartus/linux64//perl/lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/isa/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/isa/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audioplay_proce_cpu --dir=/tmp/alt0237_3893697859703161793.dir/0014_cpu_gen/ --quartus_bindir=/home/isa/intelFPGA_lite/18.0/quartus/linux64/ --verilog --config=/tmp/alt0237_3893697859703161793.dir/0014_cpu_gen//audioplay_proce_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2025.05.29 15:28:21 (*) Starting Nios II generation
-Info: cpu: # 2025.05.29 15:28:21 (*)   Checking for plaintext license.
-Info: cpu: # 2025.05.29 15:28:22 (*)   Couldn't query license setup in Quartus directory /home/isa/intelFPGA_lite/18.0/quartus/linux64/
-Info: cpu: # 2025.05.29 15:28:22 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2025.05.29 15:28:22 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2025.05.29 15:28:22 (*)   Plaintext license not found.
-Info: cpu: # 2025.05.29 15:28:22 (*)   Checking for encrypted license (non-evaluation).
-Info: cpu: # 2025.05.29 15:28:23 (*)   Couldn't query license setup in Quartus directory /home/isa/intelFPGA_lite/18.0/quartus/linux64/
-Info: cpu: # 2025.05.29 15:28:23 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2025.05.29 15:28:23 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2025.05.29 15:28:23 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
-Info: cpu: # 2025.05.29 15:28:23 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2025.05.29 15:28:23 (*)   Creating all objects for CPU
-Info: cpu: # 2025.05.29 15:28:23 (*)     Testbench
-Info: cpu: # 2025.05.29 15:28:23 (*)     Instruction decoding
-Info: cpu: # 2025.05.29 15:28:23 (*)       Instruction fields
-Info: cpu: # 2025.05.29 15:28:23 (*)       Instruction decodes
-Info: cpu: # 2025.05.29 15:28:24 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2025.05.29 15:28:24 (*)       Instruction controls
-Info: cpu: # 2025.05.29 15:28:24 (*)     Pipeline frontend
-Info: cpu: # 2025.05.29 15:28:24 (*)     Pipeline backend
-Info: cpu: # 2025.05.29 15:28:27 (*)   Generating RTL from CPU objects
-Info: cpu: # 2025.05.29 15:28:30 (*)   Creating encrypted RTL
-Info: cpu: # 2025.05.29 15:28:31 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64//eperlcmd -I /home/dylanggf/intelFPGA_lite/18.0/quartus/linux64//perl/lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/europa -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin/perl_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/sopc_builder/bin -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/dylanggf/intelFPGA_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=audioplay_proce_cpu --dir=/tmp/alt0241_1524907047247576657.dir/0014_cpu_gen/ --quartus_bindir=/home/dylanggf/intelFPGA_lite/18.0/quartus/linux64/ --verilog --config=/tmp/alt0241_1524907047247576657.dir/0014_cpu_gen//audioplay_proce_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2025.06.01 20:20:07 (*) Starting Nios II generation
+Info: cpu: # 2025.06.01 20:20:07 (*)   Checking for plaintext license.
+Info: cpu: # 2025.06.01 20:20:07 (*)   Plaintext license not found.
+Info: cpu: # 2025.06.01 20:20:07 (*)   Checking for encrypted license (non-evaluation).
+Info: cpu: # 2025.06.01 20:20:08 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info: cpu: # 2025.06.01 20:20:08 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2025.06.01 20:20:08 (*)   Creating all objects for CPU
+Info: cpu: # 2025.06.01 20:20:08 (*)     Testbench
+Info: cpu: # 2025.06.01 20:20:08 (*)     Instruction decoding
+Info: cpu: # 2025.06.01 20:20:08 (*)       Instruction fields
+Info: cpu: # 2025.06.01 20:20:08 (*)       Instruction decodes
+Info: cpu: # 2025.06.01 20:20:09 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2025.06.01 20:20:09 (*)       Instruction controls
+Info: cpu: # 2025.06.01 20:20:09 (*)     Pipeline frontend
+Info: cpu: # 2025.06.01 20:20:09 (*)     Pipeline backend
+Info: cpu: # 2025.06.01 20:20:10 (*)   Generating RTL from CPU objects
+Info: cpu: # 2025.06.01 20:20:11 (*)   Creating encrypted RTL
+Info: cpu: # 2025.06.01 20:20:12 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'audioplay_proce_cpu'
 Info: cpu: "proce" instantiated altera_nios2_gen2_unit "cpu"
 Info: proce_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "proce_data_master_translator"
@@ -199,31 +193,31 @@ Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
 Info: proce_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "proce_data_master_limiter"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: hps_0_h2f_lw_axi_master_agent: "mm_interconnect_1" instantiated altera_merlin_axi_master_ni "hps_0_h2f_lw_axi_master_agent"
 Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
 Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
 Info: RAM_s2_burst_adapter: "mm_interconnect_1" instantiated altera_merlin_burst_adapter "RAM_s2_burst_adapter"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_address_alignment.sv
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_avalon_st_pipeline_base.v
 Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file /home/isa/Documents/GitHub/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file /home/dylanggf/Documents/Empotrados/Audio_reproductor/Audioempotrados/audioplay/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: border: "hps_io" instantiated altera_interface_generator "border"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: audioplay: Done "audioplay" with 49 modules, 140 files

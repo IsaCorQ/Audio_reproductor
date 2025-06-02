@@ -4,13 +4,12 @@
 
 `timescale 1 ps / 1 ps
 module audioplay (
-		input  wire        audio_0_external_interface_ADCDAT,                //                  audio_0_external_interface.ADCDAT
-		input  wire        audio_0_external_interface_ADCLRCK,               //                                            .ADCLRCK
-		input  wire        audio_0_external_interface_BCLK,                  //                                            .BCLK
+		input  wire        audio_0_external_interface_BCLK,                  //                  audio_0_external_interface.BCLK
 		output wire        audio_0_external_interface_DACDAT,                //                                            .DACDAT
 		input  wire        audio_0_external_interface_DACLRCK,               //                                            .DACLRCK
 		inout  wire        audio_and_video_config_0_external_interface_SDAT, // audio_and_video_config_0_external_interface.SDAT
 		output wire        audio_and_video_config_0_external_interface_SCLK, //                                            .SCLK
+		output wire        audio_pll_0_audio_clk_clk,                        //                       audio_pll_0_audio_clk.clk
 		input  wire        clk_clk,                                          //                                         clk.clk
 		input  wire        filtro1_sw_export,                                //                                  filtro1_sw.export
 		input  wire        filtro2_sw_export,                                //                                  filtro2_sw.export
@@ -204,9 +203,7 @@ module audioplay (
 		.writedata   (mm_interconnect_0_audio_0_avalon_audio_slave_writedata),  //                   .writedata
 		.readdata    (mm_interconnect_0_audio_0_avalon_audio_slave_readdata),   //                   .readdata
 		.irq         (irq_mapper_receiver0_irq),                                //          interrupt.irq
-		.AUD_ADCDAT  (audio_0_external_interface_ADCDAT),                       // external_interface.export
-		.AUD_ADCLRCK (audio_0_external_interface_ADCLRCK),                      //                   .export
-		.AUD_BCLK    (audio_0_external_interface_BCLK),                         //                   .export
+		.AUD_BCLK    (audio_0_external_interface_BCLK),                         // external_interface.export
 		.AUD_DACDAT  (audio_0_external_interface_DACDAT),                       //                   .export
 		.AUD_DACLRCK (audio_0_external_interface_DACLRCK)                       //                   .export
 	);
@@ -226,10 +223,10 @@ module audioplay (
 	);
 
 	audioplay_audio_pll_0 audio_pll_0 (
-		.ref_clk_clk        (clk_clk),        //      ref_clk.clk
-		.ref_reset_reset    (~reset_reset_n), //    ref_reset.reset
-		.audio_clk_clk      (),               //    audio_clk.clk
-		.reset_source_reset ()                // reset_source.reset
+		.ref_clk_clk        (clk_clk),                   //      ref_clk.clk
+		.ref_reset_reset    (~reset_reset_n),            //    ref_reset.reset
+		.audio_clk_clk      (audio_pll_0_audio_clk_clk), //    audio_clk.clk
+		.reset_source_reset ()                           // reset_source.reset
 	);
 
 	audioplay_filtro1 filtro1 (

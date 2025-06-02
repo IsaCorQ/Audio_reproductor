@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="audioplay" kind="audioplay" version="1.0" fabric="QSYS">
  <!-- Format version 18.0 614 (Future versions may contain additional information.) -->
- <!-- 2025.05.29.15:27:57 -->
+ <!-- 2025.06.01.20:19:53 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1748554075</value>
+  <value>1748830791</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1453,7 +1453,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="audio_in">
    <type>boolean</type>
-   <value>true</value>
+   <value>false</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -1469,7 +1469,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dw">
    <type>int</type>
-   <value>16</value>
+   <value>24</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2103,18 +2103,6 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <type>conduit</type>
    <isStart>false</isStart>
-   <port>
-    <name>AUD_ADCDAT</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>export</role>
-   </port>
-   <port>
-    <name>AUD_ADCLRCK</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>export</role>
-   </port>
    <port>
     <name>AUD_BCLK</name>
     <direction>Input</direction>
@@ -3391,12 +3379,6 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>filtro1</moduleName>
-    <slaveName>clk</slaveName>
-    <name>filtro1.clk</name>
-   </clockDomainMember>
-   <clockDomainMember>
-    <isBridge>false</isBridge>
     <moduleName>seg2</moduleName>
     <slaveName>clk</slaveName>
     <name>seg2.clk</name>
@@ -3442,6 +3424,12 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>rst</moduleName>
     <slaveName>clk</slaveName>
     <name>rst.clk</name>
+   </clockDomainMember>
+   <clockDomainMember>
+    <isBridge>false</isBridge>
+    <moduleName>filtro1</moduleName>
+    <slaveName>clk</slaveName>
+    <name>filtro1.clk</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -82291,7 +82279,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_CLOCK_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>1</value>
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -82301,7 +82289,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_CLK_RESET_DOMAIN">
    <type>java.lang.Integer</type>
-   <value>1</value>
+   <value>2</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -98014,33 +98002,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/filtro1.clk"
-   kind="clock"
-   version="18.0"
-   start="clk_0.clk"
-   end="filtro1.clk">
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>clk_0</startModule>
-  <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>filtro1</endModule>
-  <endConnectionPoint>clk</endConnectionPoint>
- </connection>
- <connection
    name="clk_0.clk/seg2.clk"
    kind="clock"
    version="18.0"
@@ -98254,6 +98215,33 @@ parameters are a RESULT of the module parameters. -->
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>rst</endModule>
+  <endConnectionPoint>clk</endConnectionPoint>
+ </connection>
+ <connection
+   name="clk_0.clk/filtro1.clk"
+   kind="clock"
+   version="18.0"
+   start="clk_0.clk"
+   end="filtro1.clk">
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>clk_0</startModule>
+  <startConnectionPoint>clk</startConnectionPoint>
+  <endModule>filtro1</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection

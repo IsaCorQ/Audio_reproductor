@@ -34,7 +34,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -55,7 +55,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -71,13 +71,8 @@
    {
       datum _sortIndex
       {
-         value = "13";
+         value = "15";
          type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
       }
    }
    element clk_0
@@ -139,8 +134,13 @@
    {
       datum _sortIndex
       {
-         value = "15";
+         value = "14";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
       }
    }
    element hps_0.f2h_axi_slave
@@ -247,7 +247,7 @@
    {
       datum _sortIndex
       {
-         value = "14";
+         value = "13";
          type = "int";
       }
       datum sopceditor_expanded
@@ -358,6 +358,11 @@
    internal="audio_and_video_config_0.external_interface"
    type="conduit"
    dir="end" />
+ <interface
+   name="audio_pll_0_audio_clk"
+   internal="audio_pll_0.audio_clk"
+   type="clock"
+   dir="start" />
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
    name="filtro1_sw"
@@ -435,10 +440,10 @@
    enabled="1">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
-  <parameter name="audio_in" value="true" />
+  <parameter name="audio_in" value="false" />
   <parameter name="audio_out" value="true" />
   <parameter name="avalon_bus_type" value="Memory Mapped" />
-  <parameter name="dw" value="16" />
+  <parameter name="dw" value="24" />
  </module>
  <module
    name="audio_and_video_config_0"
@@ -1085,8 +1090,8 @@
   <parameter name="width" value="7" />
  </module>
  <module name="proce" kind="altera_nios2_gen2" version="18.0" enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="2" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -1457,7 +1462,6 @@
  <connection kind="clock" version="18.0" start="clk_0.clk" end="jtag_uart_0.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="timer_0.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="filtro2.clk" />
- <connection kind="clock" version="18.0" start="clk_0.clk" end="filtro1.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="seg2.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="seg1.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="min2.clk" />
@@ -1470,6 +1474,7 @@
    start="clk_0.clk"
    end="audio_and_video_config_0.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="rst.clk" />
+ <connection kind="clock" version="18.0" start="clk_0.clk" end="filtro1.clk" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="RAM.clk1" />
  <connection kind="clock" version="18.0" start="clk_0.clk" end="RAM.clk2" />
  <connection

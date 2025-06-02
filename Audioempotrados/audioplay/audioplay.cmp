@@ -1,12 +1,11 @@
 	component audioplay is
 		port (
-			audio_0_external_interface_ADCDAT                : in    std_logic                     := 'X';             -- ADCDAT
-			audio_0_external_interface_ADCLRCK               : in    std_logic                     := 'X';             -- ADCLRCK
 			audio_0_external_interface_BCLK                  : in    std_logic                     := 'X';             -- BCLK
 			audio_0_external_interface_DACDAT                : out   std_logic;                                        -- DACDAT
 			audio_0_external_interface_DACLRCK               : in    std_logic                     := 'X';             -- DACLRCK
 			audio_and_video_config_0_external_interface_SDAT : inout std_logic                     := 'X';             -- SDAT
 			audio_and_video_config_0_external_interface_SCLK : out   std_logic;                                        -- SCLK
+			audio_pll_0_audio_clk_clk                        : out   std_logic;                                        -- clk
 			clk_clk                                          : in    std_logic                     := 'X';             -- clk
 			filtro1_sw_export                                : in    std_logic                     := 'X';             -- export
 			filtro2_sw_export                                : in    std_logic                     := 'X';             -- export

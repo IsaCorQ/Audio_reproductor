@@ -10,7 +10,6 @@
    <name preferredWidth="214" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/University Program/Clock,Library/Interface Protocols/Audio &amp; Video,Library/Interface Protocols,Project,Library/University Program/Audio &amp; Video,Library/University Program,Library,Library/University Program/Audio &amp; Video/Video,Project/System" />
+ <library expandedCategories="Project,Library" />
  <window width="1920" height="1040" x="0" y="0" />
 </preferences>

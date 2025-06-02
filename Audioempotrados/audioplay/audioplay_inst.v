@@ -1,4 +1,5 @@
 	audioplay u0 (
+		.anterior_btn_export                              (<connected-to-anterior_btn_export>),                              //                                anterior_btn.export
 		.audio_0_external_interface_BCLK                  (<connected-to-audio_0_external_interface_BCLK>),                  //                  audio_0_external_interface.BCLK
 		.audio_0_external_interface_DACDAT                (<connected-to-audio_0_external_interface_DACDAT>),                //                                            .DACDAT
 		.audio_0_external_interface_DACLRCK               (<connected-to-audio_0_external_interface_DACLRCK>),               //                                            .DACLRCK
@@ -25,10 +26,12 @@
 		.memory_oct_rzqin                                 (<connected-to-memory_oct_rzqin>),                                 //                                            .oct_rzqin
 		.min1_export                                      (<connected-to-min1_export>),                                      //                                        min1.export
 		.min2_export                                      (<connected-to-min2_export>),                                      //                                        min2.export
+		.pausa_sw_export                                  (<connected-to-pausa_sw_export>),                                  //                                    pausa_sw.export
 		.reset_reset_n                                    (<connected-to-reset_reset_n>),                                    //                                       reset.reset_n
 		.rst_export                                       (<connected-to-rst_export>),                                       //                                         rst.export
 		.seg1_export                                      (<connected-to-seg1_export>),                                      //                                        seg1.export
 		.seg2_export                                      (<connected-to-seg2_export>),                                      //                                        seg2.export
+		.siguiente_btn_export                             (<connected-to-siguiente_btn_export>),                             //                               siguiente_btn.export
 		.audio_pll_0_audio_clk_clk                        (<connected-to-audio_pll_0_audio_clk_clk>)                         //                       audio_pll_0_audio_clk.clk
 	);
 

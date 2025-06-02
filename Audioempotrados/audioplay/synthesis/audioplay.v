@@ -4,6 +4,7 @@
 
 `timescale 1 ps / 1 ps
 module audioplay (
+		input  wire        anterior_btn_export,                              //                                anterior_btn.export
 		input  wire        audio_0_external_interface_BCLK,                  //                  audio_0_external_interface.BCLK
 		output wire        audio_0_external_interface_DACDAT,                //                                            .DACDAT
 		input  wire        audio_0_external_interface_DACLRCK,               //                                            .DACLRCK
@@ -31,16 +32,18 @@ module audioplay (
 		input  wire        memory_oct_rzqin,                                 //                                            .oct_rzqin
 		output wire [6:0]  min1_export,                                      //                                        min1.export
 		output wire [6:0]  min2_export,                                      //                                        min2.export
+		input  wire        pausa_sw_export,                                  //                                    pausa_sw.export
 		input  wire        reset_reset_n,                                    //                                       reset.reset_n
 		input  wire        rst_export,                                       //                                         rst.export
 		output wire [6:0]  seg1_export,                                      //                                        seg1.export
-		output wire [6:0]  seg2_export                                       //                                        seg2.export
+		output wire [6:0]  seg2_export,                                      //                                        seg2.export
+		input  wire        siguiente_btn_export                              //                               siguiente_btn.export
 	);
 
 	wire  [31:0] proce_data_master_readdata;                                                    // mm_interconnect_0:proce_data_master_readdata -> proce:d_readdata
 	wire         proce_data_master_waitrequest;                                                 // mm_interconnect_0:proce_data_master_waitrequest -> proce:d_waitrequest
 	wire         proce_data_master_debugaccess;                                                 // proce:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:proce_data_master_debugaccess
-	wire  [14:0] proce_data_master_address;                                                     // proce:d_address -> mm_interconnect_0:proce_data_master_address
+	wire  [13:0] proce_data_master_address;                                                     // proce:d_address -> mm_interconnect_0:proce_data_master_address
 	wire   [3:0] proce_data_master_byteenable;                                                  // proce:d_byteenable -> mm_interconnect_0:proce_data_master_byteenable
 	wire         proce_data_master_read;                                                        // proce:d_read -> mm_interconnect_0:proce_data_master_read
 	wire         proce_data_master_readdatavalid;                                               // mm_interconnect_0:proce_data_master_readdatavalid -> proce:d_readdatavalid
@@ -48,7 +51,7 @@ module audioplay (
 	wire  [31:0] proce_data_master_writedata;                                                   // proce:d_writedata -> mm_interconnect_0:proce_data_master_writedata
 	wire  [31:0] proce_instruction_master_readdata;                                             // mm_interconnect_0:proce_instruction_master_readdata -> proce:i_readdata
 	wire         proce_instruction_master_waitrequest;                                          // mm_interconnect_0:proce_instruction_master_waitrequest -> proce:i_waitrequest
-	wire  [14:0] proce_instruction_master_address;                                              // proce:i_address -> mm_interconnect_0:proce_instruction_master_address
+	wire  [13:0] proce_instruction_master_address;                                              // proce:i_address -> mm_interconnect_0:proce_instruction_master_address
 	wire         proce_instruction_master_read;                                                 // proce:i_read -> mm_interconnect_0:proce_instruction_master_read
 	wire         proce_instruction_master_readdatavalid;                                        // mm_interconnect_0:proce_instruction_master_readdatavalid -> proce:i_readdatavalid
 	wire         mm_interconnect_0_audio_0_avalon_audio_slave_chipselect;                       // mm_interconnect_0:audio_0_avalon_audio_slave_chipselect -> audio_0:chipselect
@@ -117,6 +120,12 @@ module audioplay (
 	wire  [15:0] mm_interconnect_0_timer_0_s1_writedata;                                        // mm_interconnect_0:timer_0_s1_writedata -> timer_0:writedata
 	wire  [31:0] mm_interconnect_0_rst_s1_readdata;                                             // rst:readdata -> mm_interconnect_0:rst_s1_readdata
 	wire   [1:0] mm_interconnect_0_rst_s1_address;                                              // mm_interconnect_0:rst_s1_address -> rst:address
+	wire  [31:0] mm_interconnect_0_pausa_s1_readdata;                                           // pausa:readdata -> mm_interconnect_0:pausa_s1_readdata
+	wire   [1:0] mm_interconnect_0_pausa_s1_address;                                            // mm_interconnect_0:pausa_s1_address -> pausa:address
+	wire  [31:0] mm_interconnect_0_siguiente_s1_readdata;                                       // siguiente:readdata -> mm_interconnect_0:siguiente_s1_readdata
+	wire   [1:0] mm_interconnect_0_siguiente_s1_address;                                        // mm_interconnect_0:siguiente_s1_address -> siguiente:address
+	wire  [31:0] mm_interconnect_0_anterior_s1_readdata;                                        // anterior:readdata -> mm_interconnect_0:anterior_s1_readdata
+	wire   [1:0] mm_interconnect_0_anterior_s1_address;                                         // mm_interconnect_0:anterior_s1_address -> anterior:address
 	wire   [1:0] hps_0_h2f_lw_axi_master_awburst;                                               // hps_0:h2f_lw_AWBURST -> mm_interconnect_1:hps_0_h2f_lw_axi_master_awburst
 	wire   [3:0] hps_0_h2f_lw_axi_master_arlen;                                                 // hps_0:h2f_lw_ARLEN -> mm_interconnect_1:hps_0_h2f_lw_axi_master_arlen
 	wire   [3:0] hps_0_h2f_lw_axi_master_wstrb;                                                 // hps_0:h2f_lw_WSTRB -> mm_interconnect_1:hps_0_h2f_lw_axi_master_wstrb
@@ -164,7 +173,7 @@ module audioplay (
 	wire         irq_mapper_receiver1_irq;                                                      // jtag_uart_0:av_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                                                      // timer_0:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] proce_irq_irq;                                                                 // irq_mapper:sender_irq -> proce:irq
-	wire         rst_controller_reset_out_reset;                                                // rst_controller:reset_out -> [RAM:reset, RAM:reset2, audio_0:reset, audio_and_video_config_0:reset, filtro1:reset_n, filtro2:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, min1:reset_n, min2:reset_n, mm_interconnect_0:proce_reset_reset_bridge_in_reset_reset, mm_interconnect_1:RAM_reset2_reset_bridge_in_reset_reset, proce:reset_n, rst:reset_n, rst_translator:in_reset, seg1:reset_n, seg2:reset_n, timer_0:reset_n]
+	wire         rst_controller_reset_out_reset;                                                // rst_controller:reset_out -> [RAM:reset, RAM:reset2, anterior:reset_n, audio_0:reset, audio_and_video_config_0:reset, filtro1:reset_n, filtro2:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, min1:reset_n, min2:reset_n, mm_interconnect_0:proce_reset_reset_bridge_in_reset_reset, mm_interconnect_1:RAM_reset2_reset_bridge_in_reset_reset, pausa:reset_n, proce:reset_n, rst:reset_n, rst_translator:in_reset, seg1:reset_n, seg2:reset_n, siguiente:reset_n, timer_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;                                            // rst_controller:reset_req -> [RAM:reset_req, RAM:reset_req2, proce:reset_req, rst_translator:reset_req_in]
 	wire         rst_controller_001_reset_out_reset;                                            // rst_controller_001:reset_out -> mm_interconnect_1:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset
 	wire         hps_0_h2f_reset_reset;                                                         // hps_0:h2f_rst_n -> rst_controller_001:reset_in0
@@ -191,6 +200,14 @@ module audioplay (
 		.reset2      (rst_controller_reset_out_reset),      // reset2.reset
 		.reset_req2  (rst_controller_reset_out_reset_req),  //       .reset_req
 		.freeze      (1'b0)                                 // (terminated)
+	);
+
+	audioplay_anterior anterior (
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_0_anterior_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_anterior_s1_readdata), //                    .readdata
+		.in_port  (anterior_btn_export)                     // external_connection.export
 	);
 
 	audioplay_audio_0 audio_0 (
@@ -229,7 +246,7 @@ module audioplay (
 		.reset_source_reset ()                           // reset_source.reset
 	);
 
-	audioplay_filtro1 filtro1 (
+	audioplay_anterior filtro1 (
 		.clk      (clk_clk),                               //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),       //               reset.reset_n
 		.address  (mm_interconnect_0_filtro1_s1_address),  //                  s1.address
@@ -237,7 +254,7 @@ module audioplay (
 		.in_port  (filtro1_sw_export)                      // external_connection.export
 	);
 
-	audioplay_filtro1 filtro2 (
+	audioplay_anterior filtro2 (
 		.clk      (clk_clk),                               //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),       //               reset.reset_n
 		.address  (mm_interconnect_0_filtro2_s1_address),  //                  s1.address
@@ -457,6 +474,14 @@ module audioplay (
 		.out_port   (min2_export)                           // external_connection.export
 	);
 
+	audioplay_anterior pausa (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_pausa_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_pausa_s1_readdata), //                    .readdata
+		.in_port  (pausa_sw_export)                      // external_connection.export
+	);
+
 	audioplay_proce proce (
 		.clk                                 (clk_clk),                                             //                       clk.clk
 		.reset_n                             (~rst_controller_reset_out_reset),                     //                     reset.reset_n
@@ -488,7 +513,7 @@ module audioplay (
 		.dummy_ci_port                       ()                                                     // custom_instruction_master.readra
 	);
 
-	audioplay_filtro1 rst (
+	audioplay_anterior rst (
 		.clk      (clk_clk),                           //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),   //               reset.reset_n
 		.address  (mm_interconnect_0_rst_s1_address),  //                  s1.address
@@ -516,6 +541,14 @@ module audioplay (
 		.chipselect (mm_interconnect_0_seg2_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_seg2_s1_readdata),   //                    .readdata
 		.out_port   (seg2_export)                           // external_connection.export
+	);
+
+	audioplay_anterior siguiente (
+		.clk      (clk_clk),                                 //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),         //               reset.reset_n
+		.address  (mm_interconnect_0_siguiente_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_siguiente_s1_readdata), //                    .readdata
+		.in_port  (siguiente_btn_export)                     // external_connection.export
 	);
 
 	audioplay_timer_0 timer_0 (
@@ -546,6 +579,8 @@ module audioplay (
 		.proce_instruction_master_read                               (proce_instruction_master_read),                                                 //                                                .read
 		.proce_instruction_master_readdata                           (proce_instruction_master_readdata),                                             //                                                .readdata
 		.proce_instruction_master_readdatavalid                      (proce_instruction_master_readdatavalid),                                        //                                                .readdatavalid
+		.anterior_s1_address                                         (mm_interconnect_0_anterior_s1_address),                                         //                                     anterior_s1.address
+		.anterior_s1_readdata                                        (mm_interconnect_0_anterior_s1_readdata),                                        //                                                .readdata
 		.audio_0_avalon_audio_slave_address                          (mm_interconnect_0_audio_0_avalon_audio_slave_address),                          //                      audio_0_avalon_audio_slave.address
 		.audio_0_avalon_audio_slave_write                            (mm_interconnect_0_audio_0_avalon_audio_slave_write),                            //                                                .write
 		.audio_0_avalon_audio_slave_read                             (mm_interconnect_0_audio_0_avalon_audio_slave_read),                             //                                                .read
@@ -580,6 +615,8 @@ module audioplay (
 		.min2_s1_readdata                                            (mm_interconnect_0_min2_s1_readdata),                                            //                                                .readdata
 		.min2_s1_writedata                                           (mm_interconnect_0_min2_s1_writedata),                                           //                                                .writedata
 		.min2_s1_chipselect                                          (mm_interconnect_0_min2_s1_chipselect),                                          //                                                .chipselect
+		.pausa_s1_address                                            (mm_interconnect_0_pausa_s1_address),                                            //                                        pausa_s1.address
+		.pausa_s1_readdata                                           (mm_interconnect_0_pausa_s1_readdata),                                           //                                                .readdata
 		.proce_debug_mem_slave_address                               (mm_interconnect_0_proce_debug_mem_slave_address),                               //                           proce_debug_mem_slave.address
 		.proce_debug_mem_slave_write                                 (mm_interconnect_0_proce_debug_mem_slave_write),                                 //                                                .write
 		.proce_debug_mem_slave_read                                  (mm_interconnect_0_proce_debug_mem_slave_read),                                  //                                                .read
@@ -607,6 +644,8 @@ module audioplay (
 		.seg2_s1_readdata                                            (mm_interconnect_0_seg2_s1_readdata),                                            //                                                .readdata
 		.seg2_s1_writedata                                           (mm_interconnect_0_seg2_s1_writedata),                                           //                                                .writedata
 		.seg2_s1_chipselect                                          (mm_interconnect_0_seg2_s1_chipselect),                                          //                                                .chipselect
+		.siguiente_s1_address                                        (mm_interconnect_0_siguiente_s1_address),                                        //                                    siguiente_s1.address
+		.siguiente_s1_readdata                                       (mm_interconnect_0_siguiente_s1_readdata),                                       //                                                .readdata
 		.timer_0_s1_address                                          (mm_interconnect_0_timer_0_s1_address),                                          //                                      timer_0_s1.address
 		.timer_0_s1_write                                            (mm_interconnect_0_timer_0_s1_write),                                            //                                                .write
 		.timer_0_s1_readdata                                         (mm_interconnect_0_timer_0_s1_readdata),                                         //                                                .readdata

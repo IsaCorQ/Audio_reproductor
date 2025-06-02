@@ -1,5 +1,6 @@
 
 module audioplay (
+	anterior_btn_export,
 	audio_0_external_interface_BCLK,
 	audio_0_external_interface_DACDAT,
 	audio_0_external_interface_DACLRCK,
@@ -26,12 +27,15 @@ module audioplay (
 	memory_oct_rzqin,
 	min1_export,
 	min2_export,
+	pausa_sw_export,
 	reset_reset_n,
 	rst_export,
 	seg1_export,
 	seg2_export,
+	siguiente_btn_export,
 	audio_pll_0_audio_clk_clk);	
 
+	input		anterior_btn_export;
 	input		audio_0_external_interface_BCLK;
 	output		audio_0_external_interface_DACDAT;
 	input		audio_0_external_interface_DACLRCK;
@@ -58,9 +62,11 @@ module audioplay (
 	input		memory_oct_rzqin;
 	output	[6:0]	min1_export;
 	output	[6:0]	min2_export;
+	input		pausa_sw_export;
 	input		reset_reset_n;
 	input		rst_export;
 	output	[6:0]	seg1_export;
 	output	[6:0]	seg2_export;
+	input		siguiente_btn_export;
 	output		audio_pll_0_audio_clk_clk;
 endmodule

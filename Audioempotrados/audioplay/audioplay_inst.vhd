@@ -1,5 +1,6 @@
 	component audioplay is
 		port (
+			anterior_btn_export                              : in    std_logic                     := 'X';             -- export
 			audio_0_external_interface_BCLK                  : in    std_logic                     := 'X';             -- BCLK
 			audio_0_external_interface_DACDAT                : out   std_logic;                                        -- DACDAT
 			audio_0_external_interface_DACLRCK               : in    std_logic                     := 'X';             -- DACLRCK
@@ -26,16 +27,19 @@
 			memory_oct_rzqin                                 : in    std_logic                     := 'X';             -- oct_rzqin
 			min1_export                                      : out   std_logic_vector(6 downto 0);                     -- export
 			min2_export                                      : out   std_logic_vector(6 downto 0);                     -- export
+			pausa_sw_export                                  : in    std_logic                     := 'X';             -- export
 			reset_reset_n                                    : in    std_logic                     := 'X';             -- reset_n
 			rst_export                                       : in    std_logic                     := 'X';             -- export
 			seg1_export                                      : out   std_logic_vector(6 downto 0);                     -- export
 			seg2_export                                      : out   std_logic_vector(6 downto 0);                     -- export
+			siguiente_btn_export                             : in    std_logic                     := 'X';             -- export
 			audio_pll_0_audio_clk_clk                        : out   std_logic                                         -- clk
 		);
 	end component audioplay;
 
 	u0 : component audioplay
 		port map (
+			anterior_btn_export                              => CONNECTED_TO_anterior_btn_export,                              --                                anterior_btn.export
 			audio_0_external_interface_BCLK                  => CONNECTED_TO_audio_0_external_interface_BCLK,                  --                  audio_0_external_interface.BCLK
 			audio_0_external_interface_DACDAT                => CONNECTED_TO_audio_0_external_interface_DACDAT,                --                                            .DACDAT
 			audio_0_external_interface_DACLRCK               => CONNECTED_TO_audio_0_external_interface_DACLRCK,               --                                            .DACLRCK
@@ -62,10 +66,12 @@
 			memory_oct_rzqin                                 => CONNECTED_TO_memory_oct_rzqin,                                 --                                            .oct_rzqin
 			min1_export                                      => CONNECTED_TO_min1_export,                                      --                                        min1.export
 			min2_export                                      => CONNECTED_TO_min2_export,                                      --                                        min2.export
+			pausa_sw_export                                  => CONNECTED_TO_pausa_sw_export,                                  --                                    pausa_sw.export
 			reset_reset_n                                    => CONNECTED_TO_reset_reset_n,                                    --                                       reset.reset_n
 			rst_export                                       => CONNECTED_TO_rst_export,                                       --                                         rst.export
 			seg1_export                                      => CONNECTED_TO_seg1_export,                                      --                                        seg1.export
 			seg2_export                                      => CONNECTED_TO_seg2_export,                                      --                                        seg2.export
+			siguiente_btn_export                             => CONNECTED_TO_siguiente_btn_export,                             --                               siguiente_btn.export
 			audio_pll_0_audio_clk_clk                        => CONNECTED_TO_audio_pll_0_audio_clk_clk                         --                       audio_pll_0_audio_clk.clk
 		);
 

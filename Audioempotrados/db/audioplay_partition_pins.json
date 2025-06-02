@@ -144,11 +144,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "anterior_btn_export",
+					"strict" : false
+				},
+				{
 					"name" : "rst_export",
 					"strict" : false
 				},
 				{
+					"name" : "siguiente_btn_export",
+					"strict" : false
+				},
+				{
 					"name" : "filtro2_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "pausa_sw_export",
 					"strict" : false
 				},
 				{

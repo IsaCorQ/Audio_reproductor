@@ -1,0 +1,24 @@
+	component audiosystem is
+		port (
+			anterior_sw_export  : in    std_logic                    := 'X'; -- export
+			audio_ADCDAT        : in    std_logic                    := 'X'; -- ADCDAT
+			audio_ADCLRCK       : in    std_logic                    := 'X'; -- ADCLRCK
+			audio_BCLK          : in    std_logic                    := 'X'; -- BCLK
+			audio_DACDAT        : out   std_logic;                           -- DACDAT
+			audio_DACLRCK       : in    std_logic                    := 'X'; -- DACLRCK
+			audio_clk_clk       : out   std_logic;                           -- clk
+			audioconfig_SDAT    : inout std_logic                    := 'X'; -- SDAT
+			audioconfig_SCLK    : out   std_logic;                           -- SCLK
+			clk_clk             : in    std_logic                    := 'X'; -- clk
+			filt1_sw_export     : in    std_logic                    := 'X'; -- export
+			filt2_sw_export     : in    std_logic                    := 'X'; -- export
+			min1_export         : out   std_logic_vector(6 downto 0);        -- export
+			min2_export         : out   std_logic_vector(6 downto 0);        -- export
+			pausa_sw_export     : in    std_logic                    := 'X'; -- export
+			reset_reset_n       : in    std_logic                    := 'X'; -- reset_n
+			seg1_export         : out   std_logic_vector(6 downto 0);        -- export
+			seg2_export         : out   std_logic_vector(6 downto 0);        -- export
+			siguiente_sw_export : in    std_logic                    := 'X'  -- export
+		);
+	end component audiosystem;
+

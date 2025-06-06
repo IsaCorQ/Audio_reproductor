@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "audio_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "audioconfig_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min1_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min2_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg2_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "audioconfig_SDAT",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "audio_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "audio_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "pausa_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "siguiente_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "anterior_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "filt2_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "filt1_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "audio_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "audio_ADCDAT",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

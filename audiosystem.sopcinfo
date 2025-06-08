@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="audiosystem" kind="audiosystem" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2025.06.06.09:46:05 -->
+ <!-- 2025.06.08.10:45:35 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1749224765</value>
+  <value>1749401135</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -32,7 +32,7 @@
  </parameter>
  <parameter name="AUTO_DEVICE">
   <type>java.lang.String</type>
-  <value>5CSEMA6F31C6</value>
+  <value>5CSEMA5F31C6</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -811,7 +811,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="board">
    <type>java.lang.String</type>
-   <value>DE10-Standard</value>
+   <value>DE1-SoC</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -819,7 +819,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="eai">
    <type>boolean</type>
-   <value>false</value>
+   <value>true</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -829,7 +829,7 @@ the requested settings for a module instance. -->
    <type>java.lang.String</type>
    <value>Microphone to ADC</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -837,7 +837,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>true</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -845,7 +845,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>false</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -853,7 +853,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>false</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -861,15 +861,15 @@ the requested settings for a module instance. -->
    <type>java.lang.String</type>
    <value>-6dB</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>false</visible>
    <valid>true</valid>
   </parameter>
   <parameter name="data_format">
    <type>java.lang.String</type>
-   <value>Left Justified</value>
+   <value>I2S Format</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -877,7 +877,7 @@ the requested settings for a module instance. -->
    <type>int</type>
    <value>24</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -885,7 +885,7 @@ the requested settings for a module instance. -->
    <type>java.lang.String</type>
    <value>48 kHz</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -893,7 +893,7 @@ the requested settings for a module instance. -->
    <type>java.lang.String</type>
    <value>250fs/256fs</value>
    <derived>true</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>false</visible>
    <valid>true</valid>
   </parameter>
@@ -901,7 +901,7 @@ the requested settings for a module instance. -->
    <type>int</type>
    <value>0</value>
    <derived>true</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>false</visible>
    <valid>true</valid>
   </parameter>
@@ -909,7 +909,7 @@ the requested settings for a module instance. -->
    <type>java.lang.String</type>
    <value>NTSC</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -4042,7 +4042,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>5CSEMA6F31C6</value>
+   <value>5CSEMA5F31C6</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -7710,7 +7710,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="AUTO_DEVICE">
    <type>java.lang.String</type>
-   <value>5CSEMA6F31C6</value>
+   <value>5CSEMA5F31C6</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>

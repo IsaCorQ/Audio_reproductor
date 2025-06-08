@@ -1,5 +1,5 @@
 Flow report for audioempotrados
-Fri Jun  6 10:18:10 2025
+Sun Jun  8 10:52:28 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Jun  6 10:18:00 2025       ;
+; Flow Status                     ; Successful - Sun Jun  8 10:52:11 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; audioempotrados                             ;
 ; Top-level Entity Name           ; audiosystem                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,138 / 32,070 ( 4 % )                      ;
-; Total registers                 ; 1603                                        ;
+; Logic utilization (in ALMs)     ; 1,174 / 32,070 ( 4 % )                      ;
+; Total registers                 ; 1635                                        ;
 ; Total pins                      ; 43 / 457 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 150,528 / 4,065,280 ( 4 % )                 ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2025 10:15:56 ;
+; Start date & time ; 06/08/2025 10:49:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; audioempotrados     ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+-----------------+-------------+------------+
 ; Assignment Name                     ; Value                                                         ; Default Value   ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------------------------------+-----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 252976031136798.174922655622570                               ; --              ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 252976031136798.174940135207760                               ; --              ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --              ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --              ; --          ; --         ;
 ; MISC_FILE                           ; audiosystem/synthesis/../audiosystem.cmp                      ; --              ; --          ; --         ;
@@ -91,7 +91,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --              ; --          ; --         ;
 ; SLD_FILE                            ; audiosystem/synthesis/audiosystem.regmap                      ; --              ; --          ; --         ;
 ; SLD_FILE                            ; audiosystem/synthesis/audiosystem.debuginfo                   ; --              ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME audiosystem HAS_SOPCINFO 1 GENERATION_ID 1749224765 ; --              ; audiosystem ; --         ;
+; SLD_INFO                            ; QSYS_NAME audiosystem HAS_SOPCINFO 1 GENERATION_ID 1749401135 ; --              ; audiosystem ; --         ;
 ; SOPCINFO_FILE                       ; audiosystem/synthesis/../../audiosystem.sopcinfo              ; --              ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --              ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; audiosystem                                                   ; audioempotrados ; --          ; --         ;
@@ -103,11 +103,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:31     ; 1.0                     ; 1419 MB             ; 00:01:03                           ;
-; Fitter               ; 00:01:23     ; 1.1                     ; 2850 MB             ; 00:02:30                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 1203 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.9                     ; 1504 MB             ; 00:00:16                           ;
-; Total                ; 00:02:09     ; --                      ; --                  ; 00:03:56                           ;
+; Analysis & Synthesis ; 00:00:57     ; 1.0                     ; 1418 MB             ; 00:01:57                           ;
+; Fitter               ; 00:01:40     ; 1.1                     ; 2799 MB             ; 00:03:08                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 1196 MB             ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.8                     ; 1506 MB             ; 00:00:25                           ;
+; Total                ; 00:03:05     ; --                      ; --                  ; 00:05:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

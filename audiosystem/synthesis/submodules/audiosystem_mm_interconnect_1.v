@@ -46,7 +46,7 @@ module audiosystem_mm_interconnect_1 (
 		input  wire        clk_0_clk_clk,                                                       //                                                     clk_0_clk.clk
 		input  wire        hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset, // hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset.reset
 		input  wire        RAM_reset2_reset_bridge_in_reset_reset,                              //                              RAM_reset2_reset_bridge_in_reset.reset
-		output wire [11:0] RAM_s2_address,                                                      //                                                        RAM_s2.address
+		output wire [12:0] RAM_s2_address,                                                      //                                                        RAM_s2.address
 		output wire        RAM_s2_write,                                                        //                                                              .write
 		input  wire [31:0] RAM_s2_readdata,                                                     //                                                              .readdata
 		output wire [31:0] RAM_s2_writedata,                                                    //                                                              .writedata
@@ -169,7 +169,7 @@ module audiosystem_mm_interconnect_1 (
 	wire    [0:0] avalon_st_adapter_out_0_error;                        // avalon_st_adapter:out_0_error -> RAM_s2_agent:rdata_fifo_sink_error
 
 	altera_merlin_slave_translator #(
-		.AV_ADDRESS_W                   (12),
+		.AV_ADDRESS_W                   (13),
 		.AV_DATA_W                      (32),
 		.UAV_DATA_W                     (32),
 		.AV_BURSTCOUNT_W                (1),

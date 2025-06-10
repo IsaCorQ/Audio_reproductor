@@ -49,21 +49,21 @@ module audiosystem_mm_interconnect_0_router_004_default_decode
                DEFAULT_RD_CHANNEL = -1,
                DEFAULT_DESTID = 0 
    )
-  (output [80 - 77 : 0] default_destination_id,
-   output [15-1 : 0] default_wr_channel,
-   output [15-1 : 0] default_rd_channel,
-   output [15-1 : 0] default_src_channel
+  (output [56 - 52 : 0] default_destination_id,
+   output [17-1 : 0] default_wr_channel,
+   output [17-1 : 0] default_rd_channel,
+   output [17-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[80 - 77 : 0];
+    DEFAULT_DESTID[56 - 52 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 15'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 17'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module audiosystem_mm_interconnect_0_router_004_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 15'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 15'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 17'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 17'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module audiosystem_mm_interconnect_0_router_004
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [94-1 : 0]    sink_data,
+    input  [70-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module audiosystem_mm_interconnect_0_router_004
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [94-1    : 0] src_data,
-    output reg [15-1 : 0] src_channel,
+    output reg [70-1    : 0] src_data,
+    output reg [17-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -112,18 +112,18 @@ module audiosystem_mm_interconnect_0_router_004
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 51;
-    localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 80;
-    localparam PKT_DEST_ID_L = 77;
-    localparam PKT_PROTECTION_H = 84;
-    localparam PKT_PROTECTION_L = 82;
-    localparam ST_DATA_W = 94;
-    localparam ST_CHANNEL_W = 15;
+    localparam PKT_ADDR_H = 25;
+    localparam PKT_ADDR_L = 9;
+    localparam PKT_DEST_ID_H = 56;
+    localparam PKT_DEST_ID_L = 52;
+    localparam PKT_PROTECTION_H = 60;
+    localparam PKT_PROTECTION_L = 58;
+    localparam ST_DATA_W = 70;
+    localparam ST_CHANNEL_W = 17;
     localparam DECODER_TYPE = 1;
 
-    localparam PKT_TRANS_WRITE = 54;
-    localparam PKT_TRANS_READ  = 55;
+    localparam PKT_TRANS_WRITE = 28;
+    localparam PKT_TRANS_READ  = 29;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -158,16 +158,11 @@ module audiosystem_mm_interconnect_0_router_004
     assign src_valid         = sink_valid;
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
-    wire [15-1 : 0] default_src_channel;
+    wire [17-1 : 0] default_src_channel;
 
 
 
 
-    // -------------------------------------------------------
-    // Write and read transaction signals
-    // -------------------------------------------------------
-    wire read_transaction;
-    assign read_transaction  = sink_data[PKT_TRANS_READ];
 
 
     audiosystem_mm_interconnect_0_router_004_default_decode the_default_decode(
@@ -190,11 +185,7 @@ module audiosystem_mm_interconnect_0_router_004
 
 
         if (destid == 0 ) begin
-            src_channel = 15'b01;
-        end
-
-        if (destid == 1  && read_transaction) begin
-            src_channel = 15'b10;
+            src_channel = 17'b1;
         end
 
 

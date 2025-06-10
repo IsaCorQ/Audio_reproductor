@@ -134,13 +134,13 @@ module audiosystem_mm_interconnect_1_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h8000 - 64'h4000); 
+    localparam PAD0 = log2ceil(64'h10000 - 64'h8000); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h8000;
+    localparam ADDR_RANGE = 64'h10000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -184,7 +184,7 @@ module audiosystem_mm_interconnect_1_router
         // --------------------------------------------------
            
          
-          // ( 4000 .. 8000 )
+          // ( 8000 .. 10000 )
           src_channel = 2'b1;
           src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
 	     

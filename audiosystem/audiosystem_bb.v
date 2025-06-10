@@ -12,13 +12,37 @@ module audiosystem (
 	clk_clk,
 	filt1_sw_export,
 	filt2_sw_export,
+	memory_mem_a,
+	memory_mem_ba,
+	memory_mem_ck,
+	memory_mem_ck_n,
+	memory_mem_cke,
+	memory_mem_cs_n,
+	memory_mem_ras_n,
+	memory_mem_cas_n,
+	memory_mem_we_n,
+	memory_mem_reset_n,
+	memory_mem_dq,
+	memory_mem_dqs,
+	memory_mem_dqs_n,
+	memory_mem_odt,
+	memory_mem_dm,
+	memory_oct_rzqin,
 	min1_export,
 	min2_export,
 	pausa_sw_export,
 	reset_reset_n,
 	seg1_export,
 	seg2_export,
-	siguiente_sw_export);	
+	siguiente_sw_export,
+	vga_controller_CLK,
+	vga_controller_HS,
+	vga_controller_VS,
+	vga_controller_BLANK,
+	vga_controller_SYNC,
+	vga_controller_R,
+	vga_controller_G,
+	vga_controller_B);	
 
 	input		anterior_sw_export;
 	input		audio_ADCDAT;
@@ -32,6 +56,22 @@ module audiosystem (
 	input		clk_clk;
 	input		filt1_sw_export;
 	input		filt2_sw_export;
+	output	[12:0]	memory_mem_a;
+	output	[2:0]	memory_mem_ba;
+	output		memory_mem_ck;
+	output		memory_mem_ck_n;
+	output		memory_mem_cke;
+	output		memory_mem_cs_n;
+	output		memory_mem_ras_n;
+	output		memory_mem_cas_n;
+	output		memory_mem_we_n;
+	output		memory_mem_reset_n;
+	inout	[7:0]	memory_mem_dq;
+	inout		memory_mem_dqs;
+	inout		memory_mem_dqs_n;
+	output		memory_mem_odt;
+	output		memory_mem_dm;
+	input		memory_oct_rzqin;
 	output	[6:0]	min1_export;
 	output	[6:0]	min2_export;
 	input		pausa_sw_export;
@@ -39,4 +79,12 @@ module audiosystem (
 	output	[6:0]	seg1_export;
 	output	[6:0]	seg2_export;
 	input		siguiente_sw_export;
+	output		vga_controller_CLK;
+	output		vga_controller_HS;
+	output		vga_controller_VS;
+	output		vga_controller_BLANK;
+	output		vga_controller_SYNC;
+	output	[7:0]	vga_controller_R;
+	output	[7:0]	vga_controller_G;
+	output	[7:0]	vga_controller_B;
 endmodule

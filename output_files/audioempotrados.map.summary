@@ -1,17 +1,17 @@
-Analysis & Synthesis Status : Successful - Sun Jun  8 10:50:14 2025
+Analysis & Synthesis Status : Successful - Tue Jun 10 14:19:21 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : audioempotrados
 Top-level Entity Name : audiosystem
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1556
-Total pins : 43
+Total registers : 2579
+Total pins : 109
 Total virtual pins : 0
-Total block memory bits : 150,528
+Total block memory bits : 347,136
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
 Total HSSI PMA TX Serializers : 0
-Total PLLs : 1
-Total DLLs : 0
+Total PLLs : 2
+Total DLLs : 1

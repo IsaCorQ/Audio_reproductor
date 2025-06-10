@@ -21,7 +21,7 @@ int main(void) {
     volatile uint16_t *char_buf  = (volatile uint16_t *)FPGA_CHAR_BASE;
 
     // 3) Limpia pantalla
-    uint16_t blank = (0x02 << 8) | ' ';
+    uint16_t blank = 00000000 | ' ';
     for (int i = 0; i < VGA_COLS * VGA_ROWS; ++i)
         char_buf[i] = blank;
 
@@ -72,7 +72,7 @@ int main(void) {
         }
 
         int idx = row * VGA_COLS + col;
-        char_buf[idx] = (0x07 << 8) | c;
+        char_buf[idx] = 00000000 | c;
         ++col;
     }
 

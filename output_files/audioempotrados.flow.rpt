@@ -1,5 +1,5 @@
 Flow report for audioempotrados
-Tue Jun 10 14:23:13 2025
+Fri Jun 13 14:34:48 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Jun 10 14:22:22 2025       ;
+; Flow Status                     ; Successful - Fri Jun 13 14:34:16 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; audioempotrados                             ;
 ; Top-level Entity Name           ; audiosystem                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,686 / 32,070 ( 5 % )                      ;
-; Total registers                 ; 2700                                        ;
-; Total pins                      ; 109 / 457 ( 24 % )                          ;
+; Logic utilization (in ALMs)     ; 1,784 / 32,070 ( 6 % )                      ;
+; Total registers                 ; 2717                                        ;
+; Total pins                      ; 111 / 457 ( 24 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 347,136 / 4,065,280 ( 9 % )                 ;
+; Total block memory bits         ; 1,133,568 / 4,065,280 ( 28 % )              ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/10/2025 14:12:31 ;
+; Start date & time ; 06/13/2025 14:28:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; audioempotrados     ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------------------------------------------------------------+-----------------+---------------------------------+------------+
 ; Assignment Name                       ; Value                                                                     ; Default Value   ; Entity Name                     ; Section Id ;
 +---------------------------------------+---------------------------------------------------------------------------+-----------------+---------------------------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 51368067712058.174958634419006                                            ; --              ; --                              ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 51368067712058.174984652328687                                            ; --              ; --                              ; --         ;
 ; ECO_REGENERATE_REPORT                 ; On                                                                        ; Off             ; --                              ; --         ;
 ; HPS_ISW_FILE                          ; audiosystem/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --              ; audiosystem_hps_0_hps_io_border ; --         ;
 ; HPS_ISW_FILE                          ; audiosystem/synthesis/submodules/sequencer/alt_types.pre.h                ; --              ; audiosystem_hps_0_hps_io_border ; --         ;
@@ -120,7 +120,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY              ; output_files                                                              ; --              ; --                              ; --         ;
 ; SLD_FILE                              ; audiosystem/synthesis/audiosystem.regmap                                  ; --              ; --                              ; --         ;
 ; SLD_FILE                              ; audiosystem/synthesis/audiosystem.debuginfo                               ; --              ; --                              ; --         ;
-; SLD_INFO                              ; QSYS_NAME audiosystem HAS_SOPCINFO 1 GENERATION_ID 1749586232             ; --              ; audiosystem                     ; --         ;
+; SLD_INFO                              ; QSYS_NAME audiosystem HAS_SOPCINFO 1 GENERATION_ID 1749845582             ; --              ; audiosystem                     ; --         ;
 ; SOPCINFO_FILE                         ; audiosystem/synthesis/../../audiosystem.sopcinfo                          ; --              ; --                              ; --         ;
 ; SYNTHESIS_ONLY_QIP                    ; On                                                                        ; --              ; --                              ; --         ;
 ; TOP_LEVEL_ENTITY                      ; audiosystem                                                               ; audioempotrados ; --                              ; --         ;
@@ -133,11 +133,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:18     ; 1.0                     ; 1579 MB             ; 00:02:08                           ;
-; Fitter               ; 00:02:33     ; 1.1                     ; 3514 MB             ; 00:04:29                           ;
-; Assembler            ; 00:00:20     ; 1.0                     ; 1256 MB             ; 00:00:20                           ;
-; Timing Analyzer      ; 00:00:49     ; 1.4                     ; 1934 MB             ; 00:01:05                           ;
-; Total                ; 00:05:00     ; --                      ; --                  ; 00:08:02                           ;
+; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 1599 MB             ; 00:01:22                           ;
+; Fitter               ; 00:01:41     ; 1.2                     ; 3525 MB             ; 00:03:25                           ;
+; Assembler            ; 00:00:14     ; 1.0                     ; 1266 MB             ; 00:00:14                           ;
+; Timing Analyzer      ; 00:00:30     ; 1.7                     ; 1957 MB             ; 00:00:48                           ;
+; Total                ; 00:03:12     ; --                      ; --                  ; 00:05:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

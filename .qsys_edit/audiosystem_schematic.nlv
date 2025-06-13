@@ -1,14 +1,14 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst audiosystem.timer -pg 1 -lvl 3 -y 840
+preplace inst audiosystem.timer -pg 1 -lvl 3 -y 850
 preplace inst audiosystem.hps_0.gmac0 -pg 1
 preplace inst audiosystem.hps_0.gmac1 -pg 1
 preplace inst audiosystem.NIOS2.reset_bridge -pg 1
 preplace inst audiosystem.hps_0.clkmgr -pg 1
-preplace inst audiosystem.pausa -pg 1 -lvl 3 -y 1340
-preplace inst audiosystem.seg1 -pg 1 -lvl 3 -y 1440
+preplace inst audiosystem.pausa -pg 1 -lvl 3 -y 1390
+preplace inst audiosystem.seg1 -pg 1 -lvl 3 -y 1490
 preplace inst audiosystem.hps_0.timer0 -pg 1
-preplace inst audiosystem.seg2 -pg 1 -lvl 3 -y 1540
+preplace inst audiosystem.seg2 -pg 1 -lvl 3 -y 1590
 preplace inst audiosystem.hps_0.timer1 -pg 1
 preplace inst audiosystem.hps_0.spim0 -pg 1
 preplace inst audiosystem.audio_pll_0.reset_from_locked -pg 1
@@ -16,12 +16,11 @@ preplace inst audiosystem.hps_0.timer2 -pg 1
 preplace inst audiosystem.hps_0.usb0 -pg 1
 preplace inst audiosystem.hps_0.dma -pg 1
 preplace inst audiosystem.hps_0.spim1 -pg 1
-preplace inst audiosystem.siguiente -pg 1 -lvl 3 -y 1640
+preplace inst audiosystem.siguiente -pg 1 -lvl 3 -y 1690
 preplace inst audiosystem.hps_0.timer3 -pg 1
 preplace inst audiosystem.hps_0.usb1 -pg 1
-preplace inst audiosystem.fifo_0 -pg 1 -lvl 3 -y 340
-preplace inst audiosystem.filt1 -pg 1 -lvl 3 -y 940
-preplace inst audiosystem.filt2 -pg 1 -lvl 3 -y 1060
+preplace inst audiosystem.filt1 -pg 1 -lvl 3 -y 950
+preplace inst audiosystem.filt2 -pg 1 -lvl 3 -y 1050
 preplace inst audiosystem.hps_0.dcan0 -pg 1
 preplace inst audiosystem.video_vga_controller_0 -pg 1 -lvl 4 -y 680
 preplace inst audiosystem.hps_0.scu -pg 1
@@ -29,12 +28,12 @@ preplace inst audiosystem.hps_0.sdmmc -pg 1
 preplace inst audiosystem.hps_0.arm_a9_0 -pg 1
 preplace inst audiosystem.hps_0.eosc1 -pg 1
 preplace inst audiosystem.hps_0.dcan1 -pg 1
-preplace inst audiosystem.hps_0.axi_sdram -pg 1
 preplace inst audiosystem.hps_0.arm_a9_1 -pg 1
 preplace inst audiosystem.hps_0.eosc2 -pg 1
 preplace inst audiosystem.hps_0.rstmgr -pg 1
 preplace inst audiosystem.hps_0.hps_io -pg 1
-preplace inst audiosystem.JTAG -pg 1 -lvl 3 -y 740
+preplace inst audiosystem.hps_0.axi_sdram -pg 1
+preplace inst audiosystem.JTAG -pg 1 -lvl 3 -y 750
 preplace inst audiosystem.hps_0.uart0 -pg 1
 preplace inst audiosystem.hps_0.uart1 -pg 1
 preplace inst audiosystem.hps_0.timer -pg 1
@@ -43,10 +42,10 @@ preplace inst audiosystem.hps_0.gpio0 -pg 1
 preplace inst audiosystem -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst audiosystem.hps_0.gpio1 -pg 1
 preplace inst audiosystem.hps_0.gpio2 -pg 1
-preplace inst audiosystem.RAM -pg 1 -lvl 3 -y 1160
+preplace inst audiosystem.RAM -pg 1 -lvl 3 -y 1150
 preplace inst audiosystem.hps_0.nand0 -pg 1
 preplace inst audiosystem.anterior -pg 1 -lvl 3 -y 130
-preplace inst audiosystem.AUDIO -pg 1 -lvl 3 -y 480
+preplace inst audiosystem.AUDIO -pg 1 -lvl 3 -y 440
 preplace inst audiosystem.hps_0.qspi -pg 1
 preplace inst audiosystem.hps_0.hps_io.border -pg 1
 preplace inst audiosystem.hps_0.arm_gic_0 -pg 1
@@ -54,10 +53,10 @@ preplace inst audiosystem.hps_0.sdrctl -pg 1
 preplace inst audiosystem.NIOS2.cpu -pg 1
 preplace inst audiosystem.hps_0.bridges -pg 1
 preplace inst audiosystem.vga_clk -pg 1 -lvl 2 -y 980
-preplace inst audiosystem.min1 -pg 1 -lvl 3 -y 1740
+preplace inst audiosystem.min1 -pg 1 -lvl 3 -y 1790
 preplace inst audiosystem.audio_pll_0.audio_pll -pg 1
-preplace inst audiosystem.hps_0 -pg 1 -lvl 2 -y 570
-preplace inst audiosystem.min2 -pg 1 -lvl 3 -y 1240
+preplace inst audiosystem.hps_0 -pg 1 -lvl 2 -y 530
+preplace inst audiosystem.min2 -pg 1 -lvl 3 -y 1290
 preplace inst audiosystem.hps_0.wd_timer0 -pg 1
 preplace inst audiosystem.hps_0.wd_timer1 -pg 1
 preplace inst audiosystem.hps_0.i2c0 -pg 1
@@ -72,34 +71,34 @@ preplace inst audiosystem.hps_0.i2c3 -pg 1
 preplace inst audiosystem.hps_0.sysmgr -pg 1
 preplace inst audiosystem.hps_0.axi_ocram -pg 1
 preplace inst audiosystem.hps_0.f2s_periph_ref_clk -pg 1
-preplace inst audiosystem.vga_char_buffer -pg 1 -lvl 3 -y 600
+preplace inst audiosystem.vga_char_buffer -pg 1 -lvl 3 -y 590
 preplace inst audiosystem.hps_0.f2s_sdram_ref_clk -pg 1
 preplace inst audiosystem.NIOS2 -pg 1 -lvl 2 -y 810
 preplace inst audiosystem.clk_0 -pg 1 -lvl 1 -y 780
 preplace inst audiosystem.hps_0.fpga_interfaces -pg 1
 preplace inst audiosystem.hps_0.clk_0 -pg 1
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)pausa.external_connection,(SLAVE)audiosystem.pausa_sw) 1 0 3 NJ 1370 NJ 1370 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.min1,(SLAVE)min1.external_connection) 1 0 3 NJ 1770 NJ 1770 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)clk_0.clk_in,(SLAVE)audiosystem.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.seg1,(SLAVE)seg1.external_connection) 1 0 3 NJ 1470 NJ 1470 NJ
-preplace netloc INTERCONNECT<net_container>audiosystem</net_container>(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)seg1.s1,(SLAVE)min1.s1,(SLAVE)NIOS2.debug_mem_slave,(SLAVE)filt2.s1,(SLAVE)pausa.s1,(SLAVE)vga_char_buffer.avalon_char_buffer_slave,(MASTER)NIOS2.instruction_master,(SLAVE)AUDIO.avalon_audio_slave,(SLAVE)vga_char_buffer.avalon_char_control_slave,(SLAVE)RAM.s1,(SLAVE)anterior.s1,(SLAVE)min2.s1,(MASTER)NIOS2.data_master,(SLAVE)filt1.s1,(SLAVE)timer.s1,(SLAVE)seg2.s1,(SLAVE)AUDIOCONFIG.avalon_av_config_slave,(SLAVE)fifo_0.in_csr,(SLAVE)fifo_0.out,(SLAVE)siguiente.s1) 1 1 2 350 950 750
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.siguiente_sw,(SLAVE)siguiente.external_connection) 1 0 3 NJ 1670 NJ 1670 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)anterior.external_connection,(SLAVE)audiosystem.anterior_sw) 1 0 3 NJ 160 NJ 160 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.filt2_sw,(SLAVE)filt2.external_connection) 1 0 3 NJ 1090 NJ 1090 NJ
-preplace netloc FAN_OUT<net_container>audiosystem</net_container>(SLAVE)video_vga_controller_0.clk,(MASTER)vga_clk.outclk0,(SLAVE)vga_char_buffer.clk) 1 2 2 730 710 N
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.vga_controller,(SLAVE)video_vga_controller_0.external_interface) 1 0 4 NJ 1070 NJ 1070 NJ 1050 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)seg1.external_connection,(SLAVE)audiosystem.seg1) 1 0 3 NJ 1470 NJ 1470 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)pausa.external_connection,(SLAVE)audiosystem.pausa_sw) 1 0 3 NJ 1420 NJ 1420 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.min2,(SLAVE)min2.external_connection) 1 0 3 NJ 1320 NJ 1320 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.siguiente_sw,(SLAVE)siguiente.external_connection) 1 0 3 NJ 1720 NJ 1720 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.memory,(SLAVE)hps_0.memory) 1 0 2 NJ 680 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.filt2_sw,(SLAVE)filt2.external_connection) 1 0 3 NJ 1080 NJ 1080 NJ
 preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)AUDIOCONFIG.external_interface,(SLAVE)audiosystem.audioconfig) 1 0 3 NJ 80 NJ 80 NJ
-preplace netloc POINT_TO_POINT<net_container>audiosystem</net_container>(MASTER)vga_char_buffer.avalon_char_source,(SLAVE)video_vga_controller_0.avalon_vga_sink) 1 3 1 1220
 preplace netloc EXPORT<net_container>audiosystem</net_container>(MASTER)audio_pll_0.audio_clk,(MASTER)audiosystem.audio_clk) 1 3 2 NJ 270 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>audiosystem</net_container>(SLAVE)anterior.s1,(SLAVE)timer.s1,(SLAVE)seg1.s1,(SLAVE)NIOS2.debug_mem_slave,(SLAVE)min1.s1,(MASTER)NIOS2.instruction_master,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)seg2.s1,(SLAVE)AUDIO.avalon_audio_slave,(SLAVE)AUDIOCONFIG.avalon_av_config_slave,(SLAVE)filt1.s1,(SLAVE)min2.s1,(SLAVE)vga_char_buffer.avalon_char_buffer_slave,(SLAVE)RAM.s1,(SLAVE)vga_char_buffer.avalon_char_control_slave,(MASTER)NIOS2.data_master,(SLAVE)siguiente.s1,(SLAVE)filt2.s1,(SLAVE)pausa.s1) 1 1 2 350 950 810
+preplace netloc FAN_OUT<net_container>audiosystem</net_container>(SLAVE)vga_char_buffer.clk,(SLAVE)video_vga_controller_0.clk,(MASTER)vga_clk.outclk0) 1 2 2 750 700 NJ
+preplace netloc FAN_OUT<net_container>audiosystem</net_container>(SLAVE)min1.reset,(SLAVE)timer.reset,(SLAVE)AUDIOCONFIG.reset,(SLAVE)siguiente.reset,(SLAVE)RAM.reset1,(SLAVE)vga_char_buffer.reset,(SLAVE)filt1.reset,(SLAVE)vga_clk.reset,(MASTER)clk_0.clk_reset,(SLAVE)pausa.reset,(SLAVE)RAM.reset2,(SLAVE)JTAG.reset,(SLAVE)filt2.reset,(SLAVE)seg1.reset,(SLAVE)audio_pll_0.ref_reset,(SLAVE)seg2.reset,(SLAVE)min2.reset,(SLAVE)anterior.reset,(SLAVE)AUDIO.reset,(SLAVE)NIOS2.reset,(SLAVE)video_vga_controller_0.reset) 1 1 3 310 1840 870 740 NJ
 preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.seg2,(SLAVE)seg2.external_connection) 1 0 3 NJ 1490 NJ 1490 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)hps_0.memory,(SLAVE)audiosystem.memory) 1 0 2 NJ 550 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)min2.external_connection,(SLAVE)audiosystem.min2) 1 0 3 NJ 1270 NJ 1270 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)video_vga_controller_0.external_interface,(SLAVE)audiosystem.vga_controller) 1 0 4 NJ 730 NJ 730 NJ 720 NJ
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)min1.external_connection,(SLAVE)audiosystem.min1) 1 0 3 NJ 1820 NJ 1820 NJ
 preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.filt1_sw,(SLAVE)filt1.external_connection) 1 0 3 NJ 770 NJ 770 NJ
-preplace netloc POINT_TO_POINT<net_container>audiosystem</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)fifo_0.in) 1 2 1 710
-preplace netloc FAN_OUT<net_container>audiosystem</net_container>(MASTER)NIOS2.irq,(SLAVE)JTAG.irq,(SLAVE)AUDIO.interrupt,(SLAVE)timer.irq) 1 2 1 770
-preplace netloc FAN_OUT<net_container>audiosystem</net_container>(SLAVE)filt2.reset,(SLAVE)seg2.reset,(SLAVE)timer.reset,(SLAVE)video_vga_controller_0.reset,(SLAVE)anterior.reset,(SLAVE)seg1.reset,(SLAVE)min1.reset,(SLAVE)JTAG.reset,(SLAVE)min2.reset,(SLAVE)AUDIOCONFIG.reset,(SLAVE)vga_clk.reset,(SLAVE)RAM.reset1,(MASTER)clk_0.clk_reset,(SLAVE)pausa.reset,(SLAVE)fifo_0.reset_in,(SLAVE)vga_char_buffer.reset,(SLAVE)AUDIO.reset,(SLAVE)filt1.reset,(SLAVE)siguiente.reset,(SLAVE)audio_pll_0.ref_reset,(SLAVE)NIOS2.reset) 1 1 3 310 1790 790 730 1220
-preplace netloc FAN_OUT<net_container>audiosystem</net_container>(MASTER)clk_0.clk,(SLAVE)fifo_0.clk_in,(SLAVE)timer.clk,(SLAVE)filt2.clk,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)NIOS2.clk,(SLAVE)RAM.clk1,(SLAVE)AUDIOCONFIG.clk,(SLAVE)filt1.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)AUDIO.clk,(SLAVE)anterior.clk,(SLAVE)min1.clk,(SLAVE)seg1.clk,(SLAVE)seg2.clk,(SLAVE)vga_clk.refclk,(SLAVE)min2.clk,(SLAVE)pausa.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)audio_pll_0.ref_clk,(SLAVE)JTAG.clk,(SLAVE)siguiente.clk,(SLAVE)hps_0.f2h_axi_clock) 1 1 2 330 970 830
-preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.audio,(SLAVE)AUDIO.external_interface) 1 0 3 NJ 530 NJ 530 NJ
-levelinfo -pg 1 0 100 1520
-levelinfo -hier audiosystem 110 140 470 910 1270 1430
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.filt1_sw,(SLAVE)filt1.external_connection) 1 0 3 NJ 750 NJ 750 NJ
+preplace netloc POINT_TO_POINT<net_container>audiosystem</net_container>(SLAVE)video_vga_controller_0.avalon_vga_sink,(MASTER)vga_char_buffer.avalon_char_source) 1 3 1 1320
+preplace netloc POINT_TO_POINT<net_container>audiosystem</net_container>(SLAVE)RAM.s2,(MASTER)hps_0.h2f_lw_axi_master) 1 2 1 790
+preplace netloc FAN_OUT<net_container>audiosystem</net_container>(SLAVE)hps_0.f2h_axi_clock,(SLAVE)AUDIO.clk,(SLAVE)min1.clk,(SLAVE)timer.clk,(SLAVE)JTAG.clk,(SLAVE)filt1.clk,(SLAVE)filt2.clk,(SLAVE)RAM.clk2,(MASTER)clk_0.clk,(SLAVE)pausa.clk,(SLAVE)min2.clk,(SLAVE)hps_0.f2h_sdram0_clock,(SLAVE)anterior.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)audio_pll_0.ref_clk,(SLAVE)siguiente.clk,(SLAVE)seg1.clk,(SLAVE)seg2.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)AUDIOCONFIG.clk,(SLAVE)NIOS2.clk,(SLAVE)vga_clk.refclk,(SLAVE)RAM.clk1) 1 1 2 330 770 730
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.anterior_sw,(SLAVE)anterior.external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc FAN_OUT<net_container>audiosystem</net_container>(SLAVE)JTAG.irq,(SLAVE)AUDIO.interrupt,(SLAVE)timer.irq,(MASTER)NIOS2.irq) 1 2 1 850
+preplace netloc EXPORT<net_container>audiosystem</net_container>(SLAVE)audiosystem.audio,(SLAVE)AUDIO.external_interface) 1 0 3 NJ 490 NJ 490 NJ
+levelinfo -pg 1 0 100 1600
+levelinfo -hier audiosystem 110 140 470 950 1350 1510

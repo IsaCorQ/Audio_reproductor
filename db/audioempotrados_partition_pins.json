@@ -252,11 +252,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "filt1_sw_export",
+					"name" : "pausa_sw_export",
 					"strict" : false
 				},
 				{
-					"name" : "siguiente_sw_export",
+					"name" : "filt1_sw_export",
 					"strict" : false
 				},
 				{
@@ -264,11 +264,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "pausa_sw_export",
+					"name" : "siguiente_sw_export",
 					"strict" : false
 				},
 				{
 					"name" : "anterior_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "filt3_sw_export",
+					"strict" : false
+				},
+				{
+					"name" : "filt4_sw_export",
 					"strict" : false
 				},
 				{

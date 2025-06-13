@@ -12,6 +12,8 @@
 			clk_clk              : in    std_logic                     := 'X';             -- clk
 			filt1_sw_export      : in    std_logic                     := 'X';             -- export
 			filt2_sw_export      : in    std_logic                     := 'X';             -- export
+			filt3_sw_export      : in    std_logic                     := 'X';             -- export
+			filt4_sw_export      : in    std_logic                     := 'X';             -- export
 			memory_mem_a         : out   std_logic_vector(12 downto 0);                    -- mem_a
 			memory_mem_ba        : out   std_logic_vector(2 downto 0);                     -- mem_ba
 			memory_mem_ck        : out   std_logic;                                        -- mem_ck

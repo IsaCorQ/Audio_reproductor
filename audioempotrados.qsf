@@ -59,8 +59,8 @@ set_location_assignment PIN_H8 -to audio_DACLRCK
 set_location_assignment PIN_G7 -to audio_clk_clk
 set_location_assignment PIN_J12 -to audioconfig_SCLK
 set_location_assignment PIN_K12 -to audioconfig_SDAT
-set_location_assignment PIN_AB12 -to filt1_sw_export
-set_location_assignment PIN_AC12 -to filt2_sw_export
+set_location_assignment PIN_AC12 -to filt1_sw_export
+set_location_assignment PIN_AF9 -to filt2_sw_export
 set_location_assignment PIN_AC29 -to min1_export[5]
 set_location_assignment PIN_AD30 -to min1_export[4]
 set_location_assignment PIN_AB23 -to min1_export[0]
@@ -75,7 +75,7 @@ set_location_assignment PIN_AC25 -to min2_export[3]
 set_location_assignment PIN_AB28 -to min2_export[4]
 set_location_assignment PIN_AB25 -to min2_export[5]
 set_location_assignment PIN_AB22 -to min2_export[6]
-set_location_assignment PIN_AF9 -to pausa_sw_export
+set_location_assignment PIN_AB12 -to pausa_sw_export
 set_location_assignment PIN_AA14 -to reset_reset_n
 set_location_assignment PIN_W15 -to siguiente_sw_export
 set_location_assignment PIN_AJ29 -to seg2_export[0]
@@ -253,4 +253,6 @@ set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to memory_mem_reset
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to memory_mem_reset_n -tag __hps_sdram_p0
 set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to memory_mem_dm -tag __hps_sdram_p0
 set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to memory_mem_dm -tag __hps_sdram_p0
+set_location_assignment PIN_AF10 -to filt3_sw_export
+set_location_assignment PIN_AF11 -to filt4_sw_export
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

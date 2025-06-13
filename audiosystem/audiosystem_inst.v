@@ -41,6 +41,8 @@
 		.vga_controller_SYNC  (<connected-to-vga_controller_SYNC>),  //               .SYNC
 		.vga_controller_R     (<connected-to-vga_controller_R>),     //               .R
 		.vga_controller_G     (<connected-to-vga_controller_G>),     //               .G
-		.vga_controller_B     (<connected-to-vga_controller_B>)      //               .B
+		.vga_controller_B     (<connected-to-vga_controller_B>),     //               .B
+		.filt3_sw_export      (<connected-to-filt3_sw_export>),      //       filt3_sw.export
+		.filt4_sw_export      (<connected-to-filt4_sw_export>)       //       filt4_sw.export
 	);
 

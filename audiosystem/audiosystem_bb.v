@@ -42,7 +42,9 @@ module audiosystem (
 	vga_controller_SYNC,
 	vga_controller_R,
 	vga_controller_G,
-	vga_controller_B);	
+	vga_controller_B,
+	filt3_sw_export,
+	filt4_sw_export);	
 
 	input		anterior_sw_export;
 	input		audio_ADCDAT;
@@ -87,4 +89,6 @@ module audiosystem (
 	output	[7:0]	vga_controller_R;
 	output	[7:0]	vga_controller_G;
 	output	[7:0]	vga_controller_B;
+	input		filt3_sw_export;
+	input		filt4_sw_export;
 endmodule

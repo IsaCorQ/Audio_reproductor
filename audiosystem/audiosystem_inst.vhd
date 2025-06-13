@@ -42,7 +42,9 @@
 			vga_controller_SYNC  : out   std_logic;                                        -- SYNC
 			vga_controller_R     : out   std_logic_vector(7 downto 0);                     -- R
 			vga_controller_G     : out   std_logic_vector(7 downto 0);                     -- G
-			vga_controller_B     : out   std_logic_vector(7 downto 0)                      -- B
+			vga_controller_B     : out   std_logic_vector(7 downto 0);                     -- B
+			filt3_sw_export      : in    std_logic                     := 'X';             -- export
+			filt4_sw_export      : in    std_logic                     := 'X'              -- export
 		);
 	end component audiosystem;
 
@@ -90,6 +92,8 @@
 			vga_controller_SYNC  => CONNECTED_TO_vga_controller_SYNC,  --               .SYNC
 			vga_controller_R     => CONNECTED_TO_vga_controller_R,     --               .R
 			vga_controller_G     => CONNECTED_TO_vga_controller_G,     --               .G
-			vga_controller_B     => CONNECTED_TO_vga_controller_B      --               .B
+			vga_controller_B     => CONNECTED_TO_vga_controller_B,     --               .B
+			filt3_sw_export      => CONNECTED_TO_filt3_sw_export,      --       filt3_sw.export
+			filt4_sw_export      => CONNECTED_TO_filt4_sw_export       --       filt4_sw.export
 		);
 

@@ -16,6 +16,8 @@ module audiosystem (
 		input  wire        clk_clk,              //            clk.clk
 		input  wire        filt1_sw_export,      //       filt1_sw.export
 		input  wire        filt2_sw_export,      //       filt2_sw.export
+		input  wire        filt3_sw_export,      //       filt3_sw.export
+		input  wire        filt4_sw_export,      //       filt4_sw.export
 		output wire [12:0] memory_mem_a,         //         memory.mem_a
 		output wire [2:0]  memory_mem_ba,        //               .mem_ba
 		output wire        memory_mem_ck,        //               .mem_ck
@@ -58,14 +60,14 @@ module audiosystem (
 	wire  [31:0] nios2_data_master_readdata;                                             // mm_interconnect_0:NIOS2_data_master_readdata -> NIOS2:d_readdata
 	wire         nios2_data_master_waitrequest;                                          // mm_interconnect_0:NIOS2_data_master_waitrequest -> NIOS2:d_waitrequest
 	wire         nios2_data_master_debugaccess;                                          // NIOS2:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:NIOS2_data_master_debugaccess
-	wire  [16:0] nios2_data_master_address;                                              // NIOS2:d_address -> mm_interconnect_0:NIOS2_data_master_address
+	wire  [18:0] nios2_data_master_address;                                              // NIOS2:d_address -> mm_interconnect_0:NIOS2_data_master_address
 	wire   [3:0] nios2_data_master_byteenable;                                           // NIOS2:d_byteenable -> mm_interconnect_0:NIOS2_data_master_byteenable
 	wire         nios2_data_master_read;                                                 // NIOS2:d_read -> mm_interconnect_0:NIOS2_data_master_read
 	wire         nios2_data_master_write;                                                // NIOS2:d_write -> mm_interconnect_0:NIOS2_data_master_write
 	wire  [31:0] nios2_data_master_writedata;                                            // NIOS2:d_writedata -> mm_interconnect_0:NIOS2_data_master_writedata
 	wire  [31:0] nios2_instruction_master_readdata;                                      // mm_interconnect_0:NIOS2_instruction_master_readdata -> NIOS2:i_readdata
 	wire         nios2_instruction_master_waitrequest;                                   // mm_interconnect_0:NIOS2_instruction_master_waitrequest -> NIOS2:i_waitrequest
-	wire  [16:0] nios2_instruction_master_address;                                       // NIOS2:i_address -> mm_interconnect_0:NIOS2_instruction_master_address
+	wire  [18:0] nios2_instruction_master_address;                                       // NIOS2:i_address -> mm_interconnect_0:NIOS2_instruction_master_address
 	wire         nios2_instruction_master_read;                                          // NIOS2:i_read -> mm_interconnect_0:NIOS2_instruction_master_read
 	wire         mm_interconnect_0_audio_avalon_audio_slave_chipselect;                  // mm_interconnect_0:AUDIO_avalon_audio_slave_chipselect -> AUDIO:chipselect
 	wire  [31:0] mm_interconnect_0_audio_avalon_audio_slave_readdata;                    // AUDIO:readdata -> mm_interconnect_0:AUDIO_avalon_audio_slave_readdata
@@ -112,7 +114,7 @@ module audiosystem (
 	wire  [31:0] mm_interconnect_0_nios2_debug_mem_slave_writedata;                      // mm_interconnect_0:NIOS2_debug_mem_slave_writedata -> NIOS2:debug_mem_slave_writedata
 	wire         mm_interconnect_0_ram_s1_chipselect;                                    // mm_interconnect_0:RAM_s1_chipselect -> RAM:chipselect
 	wire  [31:0] mm_interconnect_0_ram_s1_readdata;                                      // RAM:readdata -> mm_interconnect_0:RAM_s1_readdata
-	wire  [12:0] mm_interconnect_0_ram_s1_address;                                       // mm_interconnect_0:RAM_s1_address -> RAM:address
+	wire  [14:0] mm_interconnect_0_ram_s1_address;                                       // mm_interconnect_0:RAM_s1_address -> RAM:address
 	wire   [3:0] mm_interconnect_0_ram_s1_byteenable;                                    // mm_interconnect_0:RAM_s1_byteenable -> RAM:byteenable
 	wire         mm_interconnect_0_ram_s1_write;                                         // mm_interconnect_0:RAM_s1_write -> RAM:write
 	wire  [31:0] mm_interconnect_0_ram_s1_writedata;                                     // mm_interconnect_0:RAM_s1_writedata -> RAM:writedata
@@ -152,6 +154,10 @@ module audiosystem (
 	wire   [1:0] mm_interconnect_0_siguiente_s1_address;                                 // mm_interconnect_0:siguiente_s1_address -> siguiente:address
 	wire  [31:0] mm_interconnect_0_anterior_s1_readdata;                                 // anterior:readdata -> mm_interconnect_0:anterior_s1_readdata
 	wire   [1:0] mm_interconnect_0_anterior_s1_address;                                  // mm_interconnect_0:anterior_s1_address -> anterior:address
+	wire  [31:0] mm_interconnect_0_filt3_s1_readdata;                                    // filt3:readdata -> mm_interconnect_0:filt3_s1_readdata
+	wire   [1:0] mm_interconnect_0_filt3_s1_address;                                     // mm_interconnect_0:filt3_s1_address -> filt3:address
+	wire  [31:0] mm_interconnect_0_filt4_s1_readdata;                                    // filt4:readdata -> mm_interconnect_0:filt4_s1_readdata
+	wire   [1:0] mm_interconnect_0_filt4_s1_address;                                     // mm_interconnect_0:filt4_s1_address -> filt4:address
 	wire   [1:0] hps_0_h2f_lw_axi_master_awburst;                                        // hps_0:h2f_lw_AWBURST -> mm_interconnect_1:hps_0_h2f_lw_axi_master_awburst
 	wire   [3:0] hps_0_h2f_lw_axi_master_arlen;                                          // hps_0:h2f_lw_ARLEN -> mm_interconnect_1:hps_0_h2f_lw_axi_master_arlen
 	wire   [3:0] hps_0_h2f_lw_axi_master_wstrb;                                          // hps_0:h2f_lw_WSTRB -> mm_interconnect_1:hps_0_h2f_lw_axi_master_wstrb
@@ -190,7 +196,7 @@ module audiosystem (
 	wire         hps_0_h2f_lw_axi_master_rvalid;                                         // mm_interconnect_1:hps_0_h2f_lw_axi_master_rvalid -> hps_0:h2f_lw_RVALID
 	wire         mm_interconnect_1_ram_s2_chipselect;                                    // mm_interconnect_1:RAM_s2_chipselect -> RAM:chipselect2
 	wire  [31:0] mm_interconnect_1_ram_s2_readdata;                                      // RAM:readdata2 -> mm_interconnect_1:RAM_s2_readdata
-	wire  [12:0] mm_interconnect_1_ram_s2_address;                                       // mm_interconnect_1:RAM_s2_address -> RAM:address2
+	wire  [14:0] mm_interconnect_1_ram_s2_address;                                       // mm_interconnect_1:RAM_s2_address -> RAM:address2
 	wire   [3:0] mm_interconnect_1_ram_s2_byteenable;                                    // mm_interconnect_1:RAM_s2_byteenable -> RAM:byteenable2
 	wire         mm_interconnect_1_ram_s2_write;                                         // mm_interconnect_1:RAM_s2_write -> RAM:write2
 	wire  [31:0] mm_interconnect_1_ram_s2_writedata;                                     // mm_interconnect_1:RAM_s2_writedata -> RAM:writedata2
@@ -199,7 +205,7 @@ module audiosystem (
 	wire         irq_mapper_receiver1_irq;                                               // JTAG:av_irq -> irq_mapper:receiver1_irq
 	wire         irq_mapper_receiver2_irq;                                               // timer:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] nios2_irq_irq;                                                          // irq_mapper:sender_irq -> NIOS2:irq
-	wire         rst_controller_reset_out_reset;                                         // rst_controller:reset_out -> [AUDIO:reset, AUDIOCONFIG:reset, JTAG:rst_n, NIOS2:reset_n, RAM:reset, RAM:reset2, anterior:reset_n, filt1:reset_n, filt2:reset_n, irq_mapper:reset, min1:reset_n, min2:reset_n, mm_interconnect_0:NIOS2_reset_reset_bridge_in_reset_reset, mm_interconnect_1:RAM_reset2_reset_bridge_in_reset_reset, pausa:reset_n, rst_translator:in_reset, seg1:reset_n, seg2:reset_n, siguiente:reset_n, timer:reset_n]
+	wire         rst_controller_reset_out_reset;                                         // rst_controller:reset_out -> [AUDIO:reset, AUDIOCONFIG:reset, JTAG:rst_n, NIOS2:reset_n, RAM:reset, RAM:reset2, anterior:reset_n, filt1:reset_n, filt2:reset_n, filt3:reset_n, filt4:reset_n, irq_mapper:reset, min1:reset_n, min2:reset_n, mm_interconnect_0:NIOS2_reset_reset_bridge_in_reset_reset, mm_interconnect_1:RAM_reset2_reset_bridge_in_reset_reset, pausa:reset_n, rst_translator:in_reset, seg1:reset_n, seg2:reset_n, siguiente:reset_n, timer:reset_n]
 	wire         rst_controller_reset_out_reset_req;                                     // rst_controller:reset_req -> [NIOS2:reset_req, RAM:reset_req, RAM:reset_req2, rst_translator:reset_req_in]
 	wire         rst_controller_001_reset_out_reset;                                     // rst_controller_001:reset_out -> [mm_interconnect_0:vga_char_buffer_reset_reset_bridge_in_reset_reset, vga_char_buffer:reset, video_vga_controller_0:reset]
 	wire         rst_controller_002_reset_out_reset;                                     // rst_controller_002:reset_out -> mm_interconnect_1:hps_0_h2f_lw_axi_master_agent_clk_reset_reset_bridge_in_reset_reset
@@ -331,6 +337,22 @@ module audiosystem (
 		.address  (mm_interconnect_0_filt2_s1_address),  //                  s1.address
 		.readdata (mm_interconnect_0_filt2_s1_readdata), //                    .readdata
 		.in_port  (filt2_sw_export)                      // external_connection.export
+	);
+
+	audiosystem_anterior filt3 (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_filt3_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_filt3_s1_readdata), //                    .readdata
+		.in_port  (filt3_sw_export)                      // external_connection.export
+	);
+
+	audiosystem_anterior filt4 (
+		.clk      (clk_clk),                             //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),     //               reset.reset_n
+		.address  (mm_interconnect_0_filt4_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_filt4_s1_readdata), //                    .readdata
+		.in_port  (filt4_sw_export)                      // external_connection.export
 	);
 
 	audiosystem_hps_0 #(
@@ -667,6 +689,10 @@ module audiosystem (
 		.filt1_s1_readdata                                    (mm_interconnect_0_filt1_s1_readdata),                                    //                                            .readdata
 		.filt2_s1_address                                     (mm_interconnect_0_filt2_s1_address),                                     //                                    filt2_s1.address
 		.filt2_s1_readdata                                    (mm_interconnect_0_filt2_s1_readdata),                                    //                                            .readdata
+		.filt3_s1_address                                     (mm_interconnect_0_filt3_s1_address),                                     //                                    filt3_s1.address
+		.filt3_s1_readdata                                    (mm_interconnect_0_filt3_s1_readdata),                                    //                                            .readdata
+		.filt4_s1_address                                     (mm_interconnect_0_filt4_s1_address),                                     //                                    filt4_s1.address
+		.filt4_s1_readdata                                    (mm_interconnect_0_filt4_s1_readdata),                                    //                                            .readdata
 		.JTAG_avalon_jtag_slave_address                       (mm_interconnect_0_jtag_avalon_jtag_slave_address),                       //                      JTAG_avalon_jtag_slave.address
 		.JTAG_avalon_jtag_slave_write                         (mm_interconnect_0_jtag_avalon_jtag_slave_write),                         //                                            .write
 		.JTAG_avalon_jtag_slave_read                          (mm_interconnect_0_jtag_avalon_jtag_slave_read),                          //                                            .read

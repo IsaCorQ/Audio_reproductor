@@ -1,0 +1,50 @@
+	component audiosystem is
+		port (
+			anterior_sw_export   : in    std_logic                     := 'X';             -- export
+			audio_ADCDAT         : in    std_logic                     := 'X';             -- ADCDAT
+			audio_ADCLRCK        : in    std_logic                     := 'X';             -- ADCLRCK
+			audio_BCLK           : in    std_logic                     := 'X';             -- BCLK
+			audio_DACDAT         : out   std_logic;                                        -- DACDAT
+			audio_DACLRCK        : in    std_logic                     := 'X';             -- DACLRCK
+			audio_clk_clk        : out   std_logic;                                        -- clk
+			audioconfig_SDAT     : inout std_logic                     := 'X';             -- SDAT
+			audioconfig_SCLK     : out   std_logic;                                        -- SCLK
+			clk_clk              : in    std_logic                     := 'X';             -- clk
+			filt1_sw_export      : in    std_logic                     := 'X';             -- export
+			filt2_sw_export      : in    std_logic                     := 'X';             -- export
+			filt3_sw_export      : in    std_logic                     := 'X';             -- export
+			filt4_sw_export      : in    std_logic                     := 'X';             -- export
+			memory_mem_a         : out   std_logic_vector(12 downto 0);                    -- mem_a
+			memory_mem_ba        : out   std_logic_vector(2 downto 0);                     -- mem_ba
+			memory_mem_ck        : out   std_logic;                                        -- mem_ck
+			memory_mem_ck_n      : out   std_logic;                                        -- mem_ck_n
+			memory_mem_cke       : out   std_logic;                                        -- mem_cke
+			memory_mem_cs_n      : out   std_logic;                                        -- mem_cs_n
+			memory_mem_ras_n     : out   std_logic;                                        -- mem_ras_n
+			memory_mem_cas_n     : out   std_logic;                                        -- mem_cas_n
+			memory_mem_we_n      : out   std_logic;                                        -- mem_we_n
+			memory_mem_reset_n   : out   std_logic;                                        -- mem_reset_n
+			memory_mem_dq        : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- mem_dq
+			memory_mem_dqs       : inout std_logic                     := 'X';             -- mem_dqs
+			memory_mem_dqs_n     : inout std_logic                     := 'X';             -- mem_dqs_n
+			memory_mem_odt       : out   std_logic;                                        -- mem_odt
+			memory_mem_dm        : out   std_logic;                                        -- mem_dm
+			memory_oct_rzqin     : in    std_logic                     := 'X';             -- oct_rzqin
+			min1_export          : out   std_logic_vector(6 downto 0);                     -- export
+			min2_export          : out   std_logic_vector(6 downto 0);                     -- export
+			pausa_sw_export      : in    std_logic                     := 'X';             -- export
+			reset_reset_n        : in    std_logic                     := 'X';             -- reset_n
+			seg1_export          : out   std_logic_vector(6 downto 0);                     -- export
+			seg2_export          : out   std_logic_vector(6 downto 0);                     -- export
+			siguiente_sw_export  : in    std_logic                     := 'X';             -- export
+			vga_controller_CLK   : out   std_logic;                                        -- CLK
+			vga_controller_HS    : out   std_logic;                                        -- HS
+			vga_controller_VS    : out   std_logic;                                        -- VS
+			vga_controller_BLANK : out   std_logic;                                        -- BLANK
+			vga_controller_SYNC  : out   std_logic;                                        -- SYNC
+			vga_controller_R     : out   std_logic_vector(7 downto 0);                     -- R
+			vga_controller_G     : out   std_logic_vector(7 downto 0);                     -- G
+			vga_controller_B     : out   std_logic_vector(7 downto 0)                      -- B
+		);
+	end component audiosystem;
+
